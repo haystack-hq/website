@@ -1001,6 +1001,10 @@ mr = (function (mr, $, window, document){
                                     mr.forms.resetForm(thisForm);
                                     mr.forms.showFormSuccess(formSuccess, formError, 1000, 5000, 500);
                                 }
+
+                                //log with analytics
+                                ga('send', 'event', 'SignUp', 'footer', 'Early Access Campaign');
+
                             }
                         }
                     });
