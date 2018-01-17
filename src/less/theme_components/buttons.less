@@ -2,13 +2,22 @@
 
 .btn{
 	position: relative;
+
+	&[class*='primary'] {
+		/*
+		background-image: linear-gradient(to right, #1495f3 0%, #514cc5 37%, #7e139c 100%);
+
+		*/
+
+		font-color: @color-dark;
+	}
 	&:not([class*='primary']){
 		border-color: #d3d3d3;
 		&:hover{
 			border-color: @color-dark;
 		}
 	}
-	&.type--uppercase{
+	&.type--uppercase {
 		letter-spacing: .5px;
 		.btn__text{
 			letter-spacing: .5px;
