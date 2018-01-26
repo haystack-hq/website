@@ -970,18 +970,18 @@ div[data-overlay] ul {
 }
 .btn--primary-1,
 .btn--primary-1:visited {
-  background: #31639C;
-  border-color: #31639C;
+  background: #3d6821;
+  border-color: #3d6821;
 }
 .btn--primary-1 .btn__text,
 .btn--primary-1:visited .btn__text {
   color: #fff;
 }
 .btn--primary-1:hover {
-  background: #376faf;
+  background: #487b27;
 }
 .btn--primary-1:active {
-  background: #2b5789;
+  background: #32551b;
 }
 .btn--primary-2,
 .btn--primary-2:visited {
@@ -2734,7 +2734,7 @@ a {
   color: #3e1b55;
 }
 .color--primary-1 {
-  color: #31639C !important;
+  color: #3d6821 !important;
 }
 .color--primary-2 {
   color: #465773 !important;
@@ -2841,7 +2841,7 @@ a {
   background: rgba(250, 250, 250, 0.2);
 }
 .bg--primary-1 {
-  background: #31639C;
+  background: #3d6821;
 }
 .bg--primary-1 p,
 .bg--primary-1 span,
@@ -4725,7 +4725,7 @@ section.parallax .row .background-image-holder {
   right: 1.23809524em;
 }
 .label:not([class*='bg--']) {
-  background: #31639C;
+  background: #3d6821;
 }
 .label.label--inline {
   position: relative;
@@ -7202,7 +7202,7 @@ input[type="submit"][type="submit"].btn--loading:after {
   border-color: #3e1b55;
 }
 .bg--primary button.btn.btn--primary-1 {
-  border-color: #31639C;
+  border-color: #3d6821;
 }
 input,
 select {
@@ -7467,7 +7467,7 @@ label {
   color: #3e1b55;
 }
 .bg--primary-1 .input-radio--innerlabel {
-  border-color: #3e7cc2;
+  border-color: #548f2d;
 }
 .bg--primary-1 .input-radio--innerlabel:hover {
   border-color: #fff;
@@ -7477,7 +7477,7 @@ label {
   border-color: #fff;
 }
 .bg--primary-1 .input-radio--innerlabel.checked label {
-  color: #31639C;
+  color: #3d6821;
 }
 .input-select {
   position: relative;

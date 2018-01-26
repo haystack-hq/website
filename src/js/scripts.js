@@ -1,6 +1,8 @@
 
 window.mr = window.mr || {};
 
+
+
 mr = (function (mr, $, window, document){
     "use strict";
 
@@ -2618,12 +2620,18 @@ mr = (function (mr, $, window, document){
 }(mr, jQuery, window, document));
 
 //////////////// Tabs
+
+/*
 mr = (function (mr, $, window, document){
     "use strict";
 
     mr.tabs = mr.tabs || {};
     
     mr.tabs.documentReady = function($){
+
+
+
+
         $('.tabs').each(function(){
             var tabs = $(this);
             tabs.after('<ul class="tabs-content">');
@@ -2708,6 +2716,8 @@ mr = (function (mr, $, window, document){
     return mr;
 
 }(mr, jQuery, window, document));
+*/
+
 
 //////////////// Toggle Class
 mr = (function (mr, $, window, document){
