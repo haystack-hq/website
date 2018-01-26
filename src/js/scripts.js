@@ -2951,10 +2951,10 @@ mr = (function (mr, $, window, document){
  
         themeDefaults = {
 					headerTag: "h5",
-				  bodyTag: "section",
+				    bodyTag: "section",
 					transitionEffect: "slideLeft",
 					autoFocus: true
-				}      
+				};
 				
 
 				if(!wizard.is('[role="application"][id^="steps-uid"]')){  	
@@ -2968,5 +2968,27 @@ mr = (function (mr, $, window, document){
 
 	  mr.components.documentReady.push(mr.wizard.documentReady);
 	  return mr;
+
+}(mr, jQuery, window, document));
+
+//////////////// Early Access Input focus
+mr = (function (mr, $, window, document){
+    "use strict";
+
+    mr.eafocus = mr.eafocus || {};
+
+
+    mr.eafocus.documentReady = function($){
+        $('.early-access').on('click', function(){
+            $('html, body').animate({
+                scrollTop: $("#early-access-email").offset().top
+            }, 500);
+            $('#early-access-email').focus();
+        });
+
+    };
+
+    mr.components.documentReady.push(mr.eafocus.documentReady);
+    return mr;
 
 }(mr, jQuery, window, document));
