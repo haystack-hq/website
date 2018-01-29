@@ -1006,6 +1006,7 @@ mr = (function (mr, $, window, document){
 
                                 //log with analytics
                                 gtag('event', 'sign_up', {
+                                    'method': 'Early Access Form',
                                     'event_category': 'Submit',
                                     'event_label': 'Early Access Campaign'
                                 });
