@@ -1005,7 +1005,7 @@ mr = (function (mr, $, window, document){
                                 }
 
                                 //log with analytics
-                                ga('send', 'event', 'SignUp', 'footer', 'Early Access Campaign');
+                                ga('gtag_UA_112594787_1.send', 'event', 'Sign Up', 'Submit', 'Early Access Campaign');
 
                             }
                         }
