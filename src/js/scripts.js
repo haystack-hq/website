@@ -1005,8 +1005,10 @@ mr = (function (mr, $, window, document){
                                 }
 
                                 //log with analytics
-                                ga('gtag_UA_112594787_1.send', 'event', 'Sign Up', 'Submit', 'Early Access Campaign');
-
+                                gtag('event', 'sign_up', {
+                                    'event_category': 'Submit',
+                                    'event_label': 'Early Access Campaign'
+                                });
                             }
                         }
                     });
