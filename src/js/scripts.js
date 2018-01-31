@@ -3029,14 +3029,14 @@ mr = (function (mr, $, window, document){
 
 }(mr, jQuery, window, document));
 
-//////////////// Early Access Input focus
+//////////////// Click and Touch Animations/Activations
 mr = (function (mr, $, window, document){
     "use strict";
 
-    mr.eafocus = mr.eafocus || {};
+    mr.clicktouch = mr.clicktouch || {};
 
 
-    mr.eafocus.documentReady = function($){
+    mr.clicktouch.documentReady = function($){
         $('.early-access').on('click', function(){
             $('html, body').animate({
                 scrollTop: $("#early-access-email").offset().top
@@ -3047,15 +3047,25 @@ mr = (function (mr, $, window, document){
         $('.contact-us-link').on('click', function(){
             $('#contact-us').addClass('modal-active');
             if(jQuery('html').hasClass('device-ios')){
-                if(!jQuery('html > body').hasClass('has-modal')){
-                    jQuery('html > body').addClass('has-modal');
+                var mainbody = jQuery('html > body');
+                if(!mainbody.hasClass('has-modal')){
+                    mainbody.addClass('has-modal');
                 }
             }
         });
 
+        $('#contact-us .contact-email').on('click touch', function(){
+            if(jQuery('html').hasClass('device-ios')){
+                e.preventDefault();
+                console.log($('#contact-us .contact-email'));
+                setTimeout(function(){
+                    $('#contact-us .contact-email').focus();
+                }, 500);
+            }
+        });
     };
 
-    mr.components.documentReady.push(mr.eafocus.documentReady);
+    mr.components.documentReady.push(mr.clicktouch.documentReady);
     return mr;
 
 }(mr, jQuery, window, document));
