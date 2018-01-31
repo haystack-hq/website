@@ -6544,7 +6544,7 @@ a.block:hover > .feature {
   -webkit-transform: translate3d(-50%, -50%, 0);
 }
 /*! -- Stack Modals -- */
-html.device-ios body.has-modal {
+html body.has-modal {
   height: 100%;
   overflow: hidden;
   width: 100%;

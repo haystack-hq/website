@@ -3046,11 +3046,11 @@ mr = (function (mr, $, window, document){
 
         $('.contact-us-link').on('click', function(){
             $('#contact-us').addClass('modal-active');
-            if(jQuery('html').hasClass('device-ios')){
+            // if(jQuery('html').hasClass('device-ios')){
                 if(!jQuery('html > body').hasClass('has-modal')){
                     jQuery('html > body').addClass('has-modal');
                 }
-            }
+            // }
         });
 
     };
