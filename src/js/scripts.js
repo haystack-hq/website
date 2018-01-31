@@ -1985,8 +1985,8 @@ mr = (function (mr, $, window, document){
             }
             closeEvent.initEvent('modalClosed.modals.mr', true, true);
             modal.removeClass('modal-active').trigger('modalClosed.modals.mr').get(0).dispatchEvent(closeEvent);
-            if(body.css('position') === 'fixed'){
-                body.css('position', 'inherit');
+            if(body.hasClass('has-modal')){
+                body.removeClass('has-modal');
             }
         }
     };
@@ -3047,7 +3047,9 @@ mr = (function (mr, $, window, document){
         $('.contact-us-link').on('click', function(){
             $('#contact-us').addClass('modal-active');
             if(jQuery('html').hasClass('device-ios')){
-                $('body').css('position', 'fixed');
+                if(!jQuery('html > body').hasClass('has-modal')){
+                    jQuery('html > body').addClass('has-modal');
+                }
             }
         });
 
