@@ -24,6 +24,7 @@
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112594787-1"></script>
+        <script src="https://smtpjs.com/v2/smtp.js"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -211,11 +212,14 @@
                                     <li>&nbsp;</li>
 
                                 </ul>
-                                <a class="btn " href="mailto:mac@haystackhq.com">
-                                    <span class="btn__text">
-                                        Contact Us
-                                    </span>
-                                </a>
+
+                                <div class="modal-instance block">
+                                    <a class="btn modal-trigger contact-us-link" href="#">
+                                        <span class="btn__text">
+                                            Contact Us
+                                        </span>
+                                    </a>
+                                </div>
                             </div>
                             <!--end of pricing-->
                         </div>
@@ -253,11 +257,13 @@
                                         <span>Team settings and controls</span>
                                     </li>
                                 </ul>
-                                <a class="btn " href="mailto:mac@haystackhq.com">
-                                    <span class="btn__text">
-                                        Contact Us
-                                    </span>
-                                </a>
+                                <div class="modal-instance block">
+                                    <a class="btn modal-trigger contact-us-link" href="#">
+                                        <span class="btn__text">
+                                            Contact Us
+                                        </span>
+                                    </a>
+                                </div>
                             </div>
                             <!--end of pricing-->
                         </div>
@@ -431,6 +437,10 @@
                 <!--end of container-->
             </section>
 
+            <!--<section id="contact-us">-->
+                <!---->
+            <!--</section>-->
+
             <footer class="footer-3 text-center-xs space--xs bg--dark">
                 <div class="container">
                     <div class="row">
@@ -466,7 +476,55 @@
                 <!--end of container-->
             </footer>
 
+            <div class="all-page-modals">
 
+                <div id="contact-us" class="modal-container">
+                    <div class="modal-content section-modal">
+                        <section class="unpad ">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-offset-3 col-sm-offset-3 col-xs-12">
+                                        <div class="feature feature-1">
+                                            <div class="feature__body boxed boxed--lg boxed--border text-left">
+                                                <div class="modal-close modal-close-cross"></div>
+                                                <div class="text-block">
+                                                    <h2 class="text-center">Contact Us</h2>
+                                                    <p>
+                                                        Let us know your questions, interests, and needs! We'll get back to you as soon as possible.
+                                                    </p>
+                                                </div>
+                                                <form method="post" action="mail/mail.php" enctype="text/plain" id="contact-us-form" data-success="Thanks for contacting us. We'll get back to you as soon as possible!" data-error="Please provide your email address." class="form--active">
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <label>Your Name:</label>
+                                                            <input type="text" name="name" placeholder="First / Last Name" class="contact-name validate-required">
+                                                        </div>
+                                                        <div class="col-sm-12">
+                                                            <label>Email Address:</label>
+                                                            <input type="email" name="email" placeholder="you@something.com" class="contact-email validate-required validate-email">
+                                                        </div>
+                                                        <div class="col-sm-12">
+                                                            <label>Message:</label>
+                                                            <textarea name="message" placeholder="Message" class="contact-message validate-required" rows="4"></textarea>
+                                                        </div>
+                                                        <div class="col-sm-12">
+                                                            <button type="submit" class="btn btn--primary">Submit</button>
+                                                        </div>
+                                                    </div>
+                                                    <!--end of row-->
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <!--end feature-->
+                                    </div>
+                                </div>
+                                <!--end of row-->
+                            </div>
+                            <!--end of container-->
+                        </section>
+                    </div>
+                </div>
+            </div>
         </div>
         <!--<div class="loader"></div>-->
         <a class="back-to-top inner-link" href="#start" data-scroll-class="100vh:active">
@@ -490,7 +548,5 @@
         <script src="js/spectragram.min.js"></script>
         <script src="js/smooth-scroll.min.js"></script>
         <script src="js/scripts.js"></script>
-
-
     </body>
 </html>

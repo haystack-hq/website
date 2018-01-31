@@ -4015,6 +4015,9 @@ section.text-center div[class*='col-']:first-child:last-child {
   margin: 0 auto;
   float: none;
 }
+section#earlyaccess-signup {
+  padding-bottom: 4.95238095em;
+}
 .section--overlap {
   z-index: 2;
   position: relative;
@@ -6570,6 +6573,15 @@ a.block:hover > .feature {
 }
 .modal-container .modal-content .imagebg:not(.image--light) .modal-close-cross:before {
   color: #fff;
+}
+.modal-container#contact-us .modal-content.section-modal {
+  background: none;
+}
+.modal-container#contact-us .modal-content.section-modal > .boxed {
+  margin: 0;
+}
+.modal-container#contact-us .modal-content.section-modal .modal-close-cross:before {
+  font-size: 2.5em;
 }
 @media all and (max-width: 767px) {
   .modal-container .modal-content > .modal-close-cross {

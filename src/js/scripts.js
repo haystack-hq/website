@@ -856,7 +856,7 @@ mr = (function (mr, $, window, document){
         
         //////////////// Handle Form Submit
 
-        $('form.form-email, form[action*="list-manage.com"], form[action*="createsend.com"]').attr('novalidate', true).off('submit').on('submit', mr.forms.submit);
+        $('form.form-email, #contact-us form, form[action*="list-manage.com"], form[action*="createsend.com"]').attr('novalidate', true).off('submit').on('submit', mr.forms.submit);
 
         //////////////// Handle Form Submit
         $(document).on('change, input, paste, keyup', '.attempted-submit .field-error', function(){
@@ -1040,7 +1040,6 @@ mr = (function (mr, $, window, document){
             if (error === 1) {
                 mr.forms.showFormError(formSuccess, formError, 1000, 5000, 500);
             } else {
-
                 thisForm.removeClass('attempted-submit');
 
                 // Hide the error if one was shown
@@ -1049,48 +1048,102 @@ mr = (function (mr, $, window, document){
                 // Create a new loading spinner in the submit button.
                 submitButton.addClass('btn--loading');
 
-                jQuery.ajax({
-                    type: "POST",
-                    url: (formAction !== "" ? formAction : "mail/mail.php"),
-                    data: thisForm.serialize()+"&url="+window.location.href+"&captcha="+captchaUsed,
-                    success: function(response) {
-                        // Swiftmailer always sends back a number representing number of emails sent.
-                        // If this is numeric (not Swift Mailer error text) AND greater than 0 then show success message.
+                if(!thisForm.is("#contact-us-form")){
+                    jQuery.ajax({
+                        type: "POST",
+                        url: (formAction !== "" ? formAction : "mail/mail.php"),
+                        data: thisForm.serialize()+"&url="+window.location.href+"&captcha="+captchaUsed,
+                        success: function(response) {
+                            // Swiftmailer always sends back a number representing number of emails sent.
+                            // If this is numeric (not Swift Mailer error text) AND greater than 0 then show success message.
 
-                        submitButton.removeClass('btn--loading');
+                            submitButton.removeClass('btn--loading');
 
-                        if ($.isNumeric(response)) {
-                            if (parseInt(response,10) > 0) {
-                                // For some browsers, if empty 'successRedirect' is undefined; for others,
-                                // 'successRedirect' is false.  Check for both.
-                                successRedirect = thisForm.attr('data-success-redirect');
-                                if (typeof successRedirect !== typeof undefined && successRedirect !== false && successRedirect !== "") {
-                                    window.location = successRedirect;
+                            if ($.isNumeric(response)) {
+                                if (parseInt(response,10) > 0) {
+                                    // For some browsers, if empty 'successRedirect' is undefined; for others,
+                                    // 'successRedirect' is false.  Check for both.
+                                    successRedirect = thisForm.attr('data-success-redirect');
+                                    if (typeof successRedirect !== typeof undefined && successRedirect !== false && successRedirect !== "") {
+                                        window.location = successRedirect;
+                                    }
+
+                                    mr.forms.resetForm(thisForm);
+                                    mr.forms.showFormSuccess(formSuccess, formError, 1000, 5000, 500);
+                                    mr.forms.captcha.resetWidgets();
                                 }
-
-                                mr.forms.resetForm(thisForm);
-                                mr.forms.showFormSuccess(formSuccess, formError, 1000, 5000, 500);
-                                mr.forms.captcha.resetWidgets();
                             }
-                        }
-                        // If error text was returned, put the text in the .form-error div and show it.
-                        else {
+                            // If error text was returned, put the text in the .form-error div and show it.
+                            else {
+                                // Keep the current error text in a data attribute on the form
+                                formError.attr('original-error', formError.text());
+                                // Show the error with the returned error text.
+                                formError.text(response).stop(true).fadeIn(1000);
+                                formSuccess.stop(true).fadeOut(1000);
+                            }
+                        },
+                        error: function(errorObject, errorText, errorHTTP) {
                             // Keep the current error text in a data attribute on the form
                             formError.attr('original-error', formError.text());
                             // Show the error with the returned error text.
-                            formError.text(response).stop(true).fadeIn(1000);
+                            formError.text(errorHTTP).stop(true).fadeIn(1000);
                             formSuccess.stop(true).fadeOut(1000);
+                            submitButton.removeClass('btn--loading');
                         }
-                    },
-                    error: function(errorObject, errorText, errorHTTP) {
-                        // Keep the current error text in a data attribute on the form
-                        formError.attr('original-error', formError.text());
-                        // Show the error with the returned error text.
-                        formError.text(errorHTTP).stop(true).fadeIn(1000);
-                        formSuccess.stop(true).fadeOut(1000);
-                        submitButton.removeClass('btn--loading');
-                    }
-                });
+                    });
+                } else {
+
+                    var data = thisForm.serializeArray();
+                    var name = null;
+                    var email = null;
+                    var message = null;
+
+                    data.map(function(v) {
+                            if (v.name === "name") { name = v.value; }
+                            if (v.name === "email") { email = v.value; }
+                            if (v.name === "message") { message = v.value; }
+                        }
+                    );
+
+                    Email.send(
+                        email,
+                        "daniel@gosolid.net",
+                        "Message for HaystackHQ Support",
+                        "Message from " + name + ": " + "<br/><br/>" + message,
+                        {
+                            token: "350ff9a8-4f69-4c2d-9949-0b587ec06dab",
+                            callback: function done(message) {
+                                if(message === "OK") {
+                                    submitButton.removeClass('btn--loading');
+                                    successRedirect = thisForm.attr('data-success-redirect');
+                                    if (typeof successRedirect !== typeof undefined && successRedirect !== false && successRedirect !== "") {
+                                        window.location = successRedirect;
+                                    }
+
+                                    mr.forms.resetForm(thisForm);
+                                    mr.forms.showFormSuccess(formSuccess, formError, 1000, 5000, 500);
+                                    mr.forms.captcha.resetWidgets();
+
+
+                                    setTimeout(function(){
+                                        var contactUsModal = jQuery('#contact-us');
+                                        if(contactUsModal.hasClass('modal-active')){
+                                            contactUsModal.removeClass('modal-active');
+                                        }
+                                    }, 500);
+
+
+                                } else {
+                                    formError.attr('original-error', formError.text());
+                                    // Show the error with the returned error text.
+                                    formError.text(message).stop(true).fadeIn(1000);
+                                    formSuccess.stop(true).fadeOut(1000);
+                                    submitButton.removeClass('btn--loading');
+                                }
+                            }
+                        }
+                    );
+                }
             }
         }
         return false;
@@ -1104,8 +1157,6 @@ mr = (function (mr, $, window, document){
             thisElement;
 
             form = $(form);
-
-
 
 
         form.find('.validate-required[type="checkbox"]').each(function() {
@@ -1821,10 +1872,10 @@ mr = (function (mr, $, window, document){
             }
         });
 
-        $('.modal-container:not(.modal--prevent-close)').on('click', function(e) { 
-            if( e.target !== this ) return;
-            mr.modals.closeActiveModal();
-        });
+        // $('.modal-container:not(.modal--prevent-close)').on('click', function(e) {
+        //     if( e.target !== this ) return;
+        //     mr.modals.closeActiveModal();
+        // });
 
         // Trigger autoshow modals
         $('.modal-container[data-autoshow]').each(function(){
@@ -2987,6 +3038,10 @@ mr = (function (mr, $, window, document){
                 scrollTop: $("#early-access-email").offset().top
             }, 500);
             $('#early-access-email').focus();
+        });
+
+        $('.contact-us-link').on('click', function(){
+            $('#contact-us').addClass('modal-active');
         });
 
     };
