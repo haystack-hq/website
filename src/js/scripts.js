@@ -3055,7 +3055,9 @@ mr = (function (mr, $, window, document){
         });
 
         $('#contact-us .contact-email').on('click touch', function(){
+
             if(jQuery('html').hasClass('device-ios')){
+                console.log('1');
                 e.preventDefault();
                 console.log($('#contact-us .contact-email'));
                 setTimeout(function(){
