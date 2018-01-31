@@ -1,12 +1,19 @@
 /*! -- Stack Modals -- */
 
+//Fix for iOS Modal Bug
 html {
-	body {
-		&.has-modal {
-			height: 100%;
-			overflow: hidden;
-			width: 100%;
-			position: absolute;
+	&.device-ios {
+		body {
+			&.has-modal {
+				height: 100%;
+				overflow: hidden;
+				width: 100%;
+				position: absolute;
+
+				.modal-container{
+					position: absolute;
+				}
+			}
 		}
 	}
 }
