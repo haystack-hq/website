@@ -1968,6 +1968,7 @@ mr = (function (mr, $, window, document){
     mr.modals.closeActiveModal = function(){
         var modal      = jQuery('body div.modal-active'), 
             closeEvent = document.createEvent('Event');
+        var body = jQuery('body');
 
         mr.util.idleSrc(modal, 'iframe');
         mr.util.pauseVideo(modal);
@@ -1984,6 +1985,9 @@ mr = (function (mr, $, window, document){
             }
             closeEvent.initEvent('modalClosed.modals.mr', true, true);
             modal.removeClass('modal-active').trigger('modalClosed.modals.mr').get(0).dispatchEvent(closeEvent);
+            if(body.css('position') === 'fixed'){
+                body.css('position', 'inherit');
+            }
         }
     };
 
@@ -3042,11 +3046,73 @@ mr = (function (mr, $, window, document){
 
         $('.contact-us-link').on('click', function(){
             $('#contact-us').addClass('modal-active');
+            if(jQuery('html').hasClass('device-ios')){
+                $('body').css('position', 'fixed');
+            }
         });
 
     };
 
     mr.components.documentReady.push(mr.eafocus.documentReady);
+    return mr;
+
+}(mr, jQuery, window, document));
+
+
+
+//////////////// Device Detection
+mr = (function (mr, $, window, document){
+    "use strict";
+
+    mr.device = mr.device || {};
+
+
+    var classNames = [];
+    if (navigator.userAgent.match(/(iPad|iPhone|iPod)/i)){
+        classNames.push('device-ios');
+    }
+    if (navigator.userAgent.match(/android/i)){
+        classNames.push('device-android');
+    }
+
+    BrowserDetection();
+
+    var html = document.getElementsByTagName('html')[0];
+
+    if (classNames.length){
+        classNames.push('on-device');
+    }
+    if (html.classList && classNames.length > 0)
+    {
+        html.classList.add.apply(html.classList, classNames);
+
+    }
+
+
+    function BrowserDetection() {
+        //Check if browser is IE
+        if (navigator.userAgent.search("MSIE") >= 0) {
+            classNames.push('is-ie');
+        }
+        //Check if browser is Chrome
+        else if (navigator.userAgent.search("Chrome") >= 0) {
+            classNames.push('is-chrome');
+        }
+        //Check if browser is Firefox
+        else if (navigator.userAgent.search("Firefox") >= 0) {
+            classNames.push('is-ff');
+        }
+        //Check if browser is Safari
+        else if (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0) {
+            classNames.push('is-safari');
+        }
+        //Check if browser is Opera
+        else if (navigator.userAgent.search("Opera") >= 0) {
+            classNames.push('is-opera');
+        }
+    }
+
+    mr.components.documentReady.push(mr.device.documentReady);
     return mr;
 
 }(mr, jQuery, window, document));
