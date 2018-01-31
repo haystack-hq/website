@@ -3,17 +3,16 @@
 //Fix for iOS Modal Bug
 
 body {
-	&.has-modal {
-		height: 100%;
-		overflow: hidden;
-		width: 100%;
-
-		&.iosBugFixCaret {
-			.modal-container{
+	&.iosBugFixCaret {
+		&.has-modal {
+			height: 100%;
+			overflow: hidden;
+			width: 100%;
+		}
+		.modal-container{
+			position: absolute;
+			>.modal-content.section-modal{
 				position: absolute;
-				>.modal-content.section-modal{
-					position: absolute;
-				}
 			}
 		}
 	}

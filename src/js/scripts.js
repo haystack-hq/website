@@ -1984,6 +1984,9 @@ mr = (function (mr, $, window, document){
             }
             closeEvent.initEvent('modalClosed.modals.mr', true, true);
             modal.removeClass('modal-active').trigger('modalClosed.modals.mr').get(0).dispatchEvent(closeEvent);
+            if(jQuery('body').hasClass('has-modal')){
+                jQuery('body').removeClass('has-modal')
+            }
         }
     };
 
@@ -3046,7 +3049,9 @@ mr = (function (mr, $, window, document){
         $('.contact-us-link').on('click', function(){
             $('#contact-us').addClass('modal-active');
             origScrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-            jQuery('html').scrollTop(0);
+            if($("body").hasClass("iosBugFixCaret")){
+                jQuery('html').scrollTop(0);
+            }
             var body = jQuery('body');
             if(!body.hasClass('has-modal')){
                 body.addClass('has-modal');
@@ -3062,7 +3067,9 @@ mr = (function (mr, $, window, document){
         jQuery(document).on('click', '.modal-close', function(){
             var body = jQuery('body');
             if(body.hasClass('has-modal')){
-                jQuery('html').scrollTop(origScrollTop);
+                if(body.hasClass("iosBugFixCaret")){
+                    jQuery('html').scrollTop(origScrollTop);
+                }
                 body.removeClass('has-modal');
             }
         });
@@ -3089,6 +3096,7 @@ mr = (function (mr, $, window, document){
             iOS11 = /OS 11_0_1|OS 11_0_2|OS 11_0_3|OS 11_1|OS 11_1_1|OS 11_1_2|OS 11_2|OS 11_2_1/.test(ua);
 
         // ios 11 bug caret position
+
         if ( iOS && iOS11 ) {
 
             // Add CSS class to body
