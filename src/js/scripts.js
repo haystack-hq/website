@@ -3054,7 +3054,7 @@ mr = (function (mr, $, window, document){
             }
         });
 
-        $('#contact-us .contact-email').on('click touch', function(){
+        $('#contact-us .contact-email').on('click touch', function(e){
 
             if(jQuery('html').hasClass('device-ios')){
                 console.log('1');
