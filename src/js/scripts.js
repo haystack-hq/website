@@ -3042,24 +3042,6 @@ mr = (function (mr, $, window, document){
 
         var origScrollTop = null;
 
-        var isiOSFix = $("body").hasClass("iosBugFixCaret");
-        var disableScroll = false;
-        var scrollPos = 0;
-        function stopScroll() {
-            disableScroll = true;
-            scrollPos = $(window).scrollTop();
-        }
-        function enableScroll() {
-            disableScroll = false;
-        }
-
-        $(window).bind('scroll', function(){
-            if(disableScroll && isiOSFix) $(window).scrollTop(scrollPos);
-        });
-        $(window).bind('touchmove', function(){
-            $(window).trigger('scroll');
-        });
-
         $('.early-access').on('click', function(){
             $('html, body').animate({
                 scrollTop: $("#early-access-email").offset().top
@@ -3072,26 +3054,26 @@ mr = (function (mr, $, window, document){
             origScrollTop = document.documentElement.scrollTop || document.body.scrollTop;
             if($("body").hasClass("iosBugFixCaret")){
                 window.scrollTo(0,0);
-                stopScroll();
             }
             var body = jQuery('body');
             if(!body.hasClass('has-modal')){
                 body.addClass('has-modal');
             }
         });
-
-        if(jQuery('body').hasClass('has-modal')){
-            document.ontouchmove = function (e) {
+        $('html, body').on('touchstart touchmove', function(e){
+            var body = jQuery('body');
+            var hasModal = body.hasClass('has-modal');
+            var isiOSFix = body.hasClass("iosBugFixCaret");
+            if(hasModal && isiOSFix){
                 e.preventDefault();
             }
-        }
+        });
 
         jQuery(document).on('click', '.modal-close', function(){
             var body = jQuery('body');
             if(body.hasClass('has-modal')){
                 if(body.hasClass("iosBugFixCaret")){
                     window.scrollTo(0,origScrollTop);
-                    enableScroll();
                 }
                 body.removeClass('has-modal');
             }
