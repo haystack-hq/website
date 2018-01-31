@@ -3060,7 +3060,8 @@ mr = (function (mr, $, window, document){
                 body.addClass('has-modal');
             }
         });
-        $('html, body').on('scroll', function(e){
+
+        $(window).scroll(function() {
             var body = jQuery('body');
             var hasModal = body.hasClass('has-modal');
             var isiOSFix = body.hasClass("iosBugFixCaret");
