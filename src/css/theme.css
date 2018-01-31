@@ -6548,7 +6548,7 @@ html.device-ios body.has-modal {
   height: 100%;
   overflow: hidden;
   width: 100%;
-  position: absolute;
+  position: fixed;
 }
 html.device-ios body.has-modal .modal-container {
   position: absolute;
