@@ -6544,13 +6544,15 @@ a.block:hover > .feature {
   -webkit-transform: translate3d(-50%, -50%, 0);
 }
 /*! -- Stack Modals -- */
-html.device-ios body.has-modal {
+body.has-modal {
   height: 100%;
   overflow: hidden;
   width: 100%;
-  position: fixed;
 }
-html.device-ios body.has-modal .modal-container {
+body.has-modal.iosBugFixCaret .modal-container {
+  position: absolute;
+}
+body.has-modal.iosBugFixCaret .modal-container > .modal-content.section-modal {
   position: absolute;
 }
 .modal-container .modal-content:not(.height--natural) {
