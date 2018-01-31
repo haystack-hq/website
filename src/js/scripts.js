@@ -1107,7 +1107,7 @@ mr = (function (mr, $, window, document){
 
                     Email.send(
                         email,
-                        "daniel@gosolid.net",
+                        "support@haystackhq.com",
                         "Message for HaystackHQ Support",
                         "Message from " + name + ": " + "<br/><br/>" + message,
                         {
