@@ -1985,7 +1985,10 @@ mr = (function (mr, $, window, document){
             closeEvent.initEvent('modalClosed.modals.mr', true, true);
             modal.removeClass('modal-active').trigger('modalClosed.modals.mr').get(0).dispatchEvent(closeEvent);
             if(jQuery('body').hasClass('has-modal')){
-                jQuery('body').removeClass('has-modal')
+                jQuery('body').removeClass('has-modal');
+                if($("body").hasClass("iosBugFixCaret")){
+                    enableScroll();
+                }
             }
         }
     };
@@ -3039,6 +3042,24 @@ mr = (function (mr, $, window, document){
 
         var origScrollTop = null;
 
+        var isiOSFix = $("body").hasClass("iosBugFixCaret");
+        var disableScroll = false;
+        var scrollPos = 0;
+        function stopScroll() {
+            disableScroll = true;
+            scrollPos = $(window).scrollTop();
+        }
+        function enableScroll() {
+            disableScroll = false;
+        }
+
+        $(window).bind('scroll', function(){
+            if(disableScroll && isiOSFix) $(window).scrollTop(scrollPos);
+        });
+        $(window).bind('touchmove', function(){
+            $(window).trigger('scroll');
+        });
+
         $('.early-access').on('click', function(){
             $('html, body').animate({
                 scrollTop: $("#early-access-email").offset().top
@@ -3050,7 +3071,8 @@ mr = (function (mr, $, window, document){
             $('#contact-us').addClass('modal-active');
             origScrollTop = document.documentElement.scrollTop || document.body.scrollTop;
             if($("body").hasClass("iosBugFixCaret")){
-                jQuery('html').scrollTop(0);
+                window.scrollTo(0,0);
+                stopScroll();
             }
             var body = jQuery('body');
             if(!body.hasClass('has-modal')){
@@ -3068,7 +3090,8 @@ mr = (function (mr, $, window, document){
             var body = jQuery('body');
             if(body.hasClass('has-modal')){
                 if(body.hasClass("iosBugFixCaret")){
-                    jQuery('html').scrollTop(origScrollTop);
+                    window.scrollTo(0,origScrollTop);
+                    enableScroll();
                 }
                 body.removeClass('has-modal');
             }
@@ -3103,6 +3126,7 @@ mr = (function (mr, $, window, document){
             $("body").addClass("iosBugFixCaret");
 
         }
+
     };
 
     mr.components.documentReady.push(mr.ios11caretfix.documentReady);
