@@ -3060,7 +3060,7 @@ mr = (function (mr, $, window, document){
                 body.addClass('has-modal');
             }
         });
-        $('html, body').on('touchstart touchmove', function(e){
+        $('html, body').on('scroll', function(e){
             var body = jQuery('body');
             var hasModal = body.hasClass('has-modal');
             var isiOSFix = body.hasClass("iosBugFixCaret");
