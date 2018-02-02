@@ -3978,6 +3978,10 @@ body.boxed-layout .modal-container section:not([class*='bg-']) {
   }
 }
 /*! -- Stack Sections -- */
+section {
+  padding-top: 2em;
+  padding-bottom: 4em;
+}
 section:not(.unpad):not(.imagebg):not([class*='bg--']):not(.imageblock):not(.unpad--bottom):not(.border--bottom):not(.space--xxs) + section:not(.unpad):not(.imagebg):not([class*='bg--']):not(.imageblock):not(.border--bottom):not(.space--xxs) {
   padding-top: 0;
 }
@@ -4754,6 +4758,10 @@ section.parallax .row .background-image-holder {
   background: #465773;
 }
 /*! -- Stack Bars -- */
+#header-logo,
+#header-logo-mobile {
+  width: 140px;
+}
 .menu-horizontal > li,
 .menu-vertical > li {
   font-family: 'Open Sans', 'Roboto', 'Helvetica', Sans-Serif;
@@ -8995,6 +9003,10 @@ section.unpad > article .imagebg + div {
   }
 }
 /*! -- Stack Footers -- */
+footer {
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
 footer .type--fine-print:not(p) {
   opacity: .5;
 }
@@ -9083,6 +9095,9 @@ footer.footer-7 {
   .footer-1 .type--fine-print {
     position: relative;
     top: 2px;
+  }
+  #footer-logo {
+    width: 96px;
   }
 }
 @media all and (max-width: 767px) {
