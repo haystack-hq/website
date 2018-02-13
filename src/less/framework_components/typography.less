@@ -1,4 +1,4 @@
-html{ 
+html{
 	font-size: @base-font-size;
 }
 @media all and (max-width: 768px){
@@ -121,8 +121,8 @@ a:hover,a:focus,a:active{
 	opacity: .5;
 }
 
-.type--uppercase{ 
-	text-transform: uppercase; 
+.type--uppercase{
+	text-transform: uppercase;
 }
 .type--bold{
 	font-weight: bold;
@@ -133,6 +133,11 @@ a:hover,a:focus,a:active{
 
 .type--fine-print{
 	font-size: @fine-print-size;
+}
+
+.type--fine-print.price{
+    font-size: 13px;
+    line-height: initial;
 }
 
 .type--strikethrough{
