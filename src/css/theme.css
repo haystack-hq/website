@@ -207,6 +207,10 @@ a:active {
 .type--fine-print {
   font-size: 0.85714286em;
 }
+.type--fine-print.price {
+  font-size: 13px;
+  line-height: initial;
+}
 .type--strikethrough {
   text-decoration: line-through;
   opacity: .5;
@@ -4655,7 +4659,7 @@ section.parallax .row .background-image-holder {
   height: 800px;
 }
 .gallery-1 > div[class*='col-']:last-child > .gallery__image {
-  height: calc(385px);
+  height: calc(800px/2 - 15);
 }
 .gallery__image {
   position: relative;
@@ -8428,7 +8432,7 @@ section.unpad > article .imagebg + div {
   height: 338px;
 }
 .masonry-blog-magazine .height--tall {
-  height: calc(706px);
+  height: calc((338px*2) + 30px);
 }
 @media all and (min-width: 991px) {
   .masonry__promo.boxed--lg {
