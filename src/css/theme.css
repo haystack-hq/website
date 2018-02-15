@@ -4659,7 +4659,7 @@ section.parallax .row .background-image-holder {
   height: 800px;
 }
 .gallery-1 > div[class*='col-']:last-child > .gallery__image {
-  height: calc(800px/2 - 15);
+  height: calc(385px);
 }
 .gallery__image {
   position: relative;
@@ -8432,7 +8432,7 @@ section.unpad > article .imagebg + div {
   height: 338px;
 }
 .masonry-blog-magazine .height--tall {
-  height: calc((338px*2) + 30px);
+  height: calc(706px);
 }
 @media all and (min-width: 991px) {
   .masonry__promo.boxed--lg {
