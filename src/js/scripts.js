@@ -3049,6 +3049,18 @@ mr = (function (mr, $, window, document){
             $('#early-access-email').focus();
         });
 
+        $('.btn.pricing').on('click', function(){
+            $('html, body').animate({
+                scrollTop: $("#pricing").offset().top
+            }, 500);
+        });
+
+        $('.btn.team-features').on('click', function(){
+            $('html, body').animate({
+                scrollTop: $("#team-features").offset().top
+            }, 500);
+        });
+
         $('.contact-us-link').on('click', function(){
             $('#contact-us').addClass('modal-active');
             origScrollTop = document.documentElement.scrollTop || document.body.scrollTop;
