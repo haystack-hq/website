@@ -5848,12 +5848,12 @@ body.dropdowns--hover .nav-sidebar-column .dropdown:hover > .dropdown__container
   text-align: center;
 }
 .checkmark:not([class*='bg-']) {
-  background: #922cd4;
+  background: none;
 }
 .checkmark:before {
   content: '\2713';
-  color: #fff;
-  font-size: 11px;
+  color: #4c4b4b;
+  font-size: 25px;
   position: absolute;
   width: 100%;
   left: 0;
@@ -8184,6 +8184,9 @@ label {
 }
 .pricing .h2 {
   margin-bottom: 0.3939393939394em;
+}
+.pricing a {
+  color: #1400bb;
 }
 .pricing ul li:not(:last-child) {
   margin-bottom: 0.46428571em;
