@@ -145,13 +145,32 @@
 	}
 }
 
-//@media all and (min-width: 768px){
-//	#menu1{
-//		> .container {
-//
-//		}
-//	}
-//}
+@media (max-width: 991px){
+	#menu1{
+		 &.mobile-toggle {
+			display: none!important;
+		}
+		.container{
+			.row {
+				.col-md-11.col-sm-12 {
+					text-align: left;
+					.bar__module {
+						margin-bottom: @base-line-height;
+							.btn {
+								display: block;
+								+ .btn {
+									margin-left: 0 !important;
+								}
+								:not(:last-child) {
+									margin-bottom: @base-line-height;
+								}
+							}
+						}
+				}
+			}
+		}
+	}
+}
 
 
 @media all and (max-width: 767px){
