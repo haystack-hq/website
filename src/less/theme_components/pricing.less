@@ -1,5 +1,18 @@
 /*! -- Stack Pricing -- */
 
+#pricing {
+	.col-sm-4 {
+		.btn{
+			&[class*='primary'] {
+				display: block;
+				border: none;
+				padding-top: 0.525em;
+				padding-bottom: 0.525em;
+			}
+		}
+	}
+}
+
 .pricing{
 	.transition(0.3s,ease);
 	position: relative;
@@ -69,7 +82,7 @@
 		}
 	}
 	ul{
-		margin-bottom: @base-line-height*3;
+		margin-bottom: 0;
 	}
 	p{
 		&:first-of-type{
@@ -151,6 +164,20 @@
 			}
 			&.boxed--emphasis{
 				right: @base-line-height/2;
+			}
+		}
+	}
+}
+
+@media all and (max-width: 767px){
+	#pricing {
+		.col-sm-4 {
+			.btn{
+				margin-bottom: 20px;
+				&[class*='primary'] {
+					box-shadow: none;
+					margin-bottom: 20px;
+				}
 			}
 		}
 	}

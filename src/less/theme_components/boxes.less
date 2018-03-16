@@ -9,7 +9,7 @@
 		border-radius: 6px;
 	}
 	&:not(:last-child){
-		margin-bottom: 30px;
+		margin-bottom: 20px;
 	}
 	&:not([class*='bg-']){
 		background: @color-bg-site;
@@ -17,6 +17,14 @@
 	&.bg--secondary{
 		.boxed{
 			background: @color-bg-secondary;
+		}
+	}
+}
+
+#pricing {
+	.boxed {
+		&:not([class*='bg-']){
+			min-height: 500px;
 		}
 	}
 }
@@ -84,6 +92,16 @@
 	.boxed{
 		&.boxed--emphasis{
 			.scale(1.075);
+		}
+	}
+}
+
+@media all and (max-width: 767px){
+	#pricing {
+		.boxed {
+			&:not([class*='bg-']){
+				min-height: inherit;
+			}
 		}
 	}
 }

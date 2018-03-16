@@ -4,11 +4,10 @@
 	position: relative;
 
 	&[class*='primary'] {
-		/*
-		background-image: linear-gradient(to right, #1495f3 0%, #514cc5 37%, #7e139c 100%);
-
-		*/
-
+		font-size: 16px;
+		border-radius: 2px;
+		text-transform: uppercase;
+		box-shadow: 0 15px 50px 2px rgba(30, 28, 31, 0.28);
 		font-color: @color-dark;
 	}
 	&:not([class*='primary']){
@@ -205,6 +204,9 @@ p{
 		&.btn-border-solid
 		{
 			border-color: rgba(255,255,255,1);
+			&.btn--primary {
+				//box-shadow: 3px 10px 25px 0 rgba(99, 196, 10, 0.11), 0 10px 60px 0 rgba(30, 28, 31, 0.48);
+			}
 		}
 	}
 }

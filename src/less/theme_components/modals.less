@@ -30,6 +30,19 @@ body {
 	&.block{
 		> .btn{
 			display: block;
+			font-size: 16px;
+			border-radius: 2px;
+			text-transform: uppercase;
+			&.contact-us-link{
+				background: #4c4b4bc7;
+				border-color: #922cd400;
+				> .btn__text {
+					color: #fff;
+				}
+				&:hover {
+					background: #4c4b4bb0;
+				}
+			}
 		}
 	}
 }
@@ -63,6 +76,9 @@ body {
 				}
 			}
 		}
+		.btn--primary {
+			border: none;
+		}
 	}
 	&#contact-us {
 		.modal-content.section-modal {
@@ -88,6 +104,9 @@ body {
 			    text-align: center;
 			    border-radius: 50%;
 			    color: #fff;
+			}
+			.btn--primary {
+				margin: 15px 0;
 			}
 		}
 		&:not(.modal-active){

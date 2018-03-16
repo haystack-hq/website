@@ -20,6 +20,11 @@
 }
 
 .feature-large{
+	&.first-feature {
+		img {
+			margin-top: 30px;
+		}
+	}
 	h4{
 		&:first-child{
 			margin-bottom: 0.68421052631579em;
@@ -70,6 +75,13 @@
 	.feature-large-2{
 		img{
 			margin: @base-line-height 0;
+		}
+	}
+	.feature-large{
+		&.first-feature {
+			img {
+				margin-top: 0;
+			}
 		}
 	}
 }
