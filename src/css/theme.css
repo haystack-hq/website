@@ -4461,9 +4461,8 @@ hr[data-title]:before {
 .btn.block + .btn.block {
   margin-top: 0.92857143em;
 }
-.btn:hover {
-  transform: translate3d(0, -2px, 0);
-  -webkit-transform: translate3d(0, -2px, 0);
+.btn:active {
+  transform: translateY(2px);
 }
 .btn.btn--sm + .btn--sm {
   margin-left: 0.92857143em;
@@ -4915,8 +4914,9 @@ section.parallax .row .background-image-holder {
 }
 .menu-toggle:hover {
   box-shadow: 0 23px 40px rgba(0, 0, 0, 0.2);
-  transform: translate3d(0, -2px, 0);
-  -webkit-transform: translate3d(0, -2px, 0);
+}
+.menu-toggle:active {
+  transform: translateY(2px);
 }
 /*! -- Stack Navigation -- */
 .nav--fixed {
