@@ -24,7 +24,18 @@
 #pricing {
 	.boxed {
 		&:not([class*='bg-']){
-			min-height: 500px;
+			border-radius: 0;
+			&.primary-price-option {
+				box-shadow: 0 0 10px rgba(22, 32, 32, 0), 0 0 10px rgba(22,32,32,.22);
+				min-height: 600px;
+				> h3 {
+					margin-top: 25px;
+				}
+			}
+			&.secondary-price-option {
+				height: 550px;
+				margin-top: 25px;
+			}
 		}
 	}
 }

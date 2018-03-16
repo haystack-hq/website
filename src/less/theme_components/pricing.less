@@ -3,11 +3,13 @@
 #pricing {
 	.col-sm-4 {
 		.btn{
+			margin-top: 15px;
 			&[class*='primary'] {
 				display: block;
 				border: none;
 				padding-top: 0.525em;
 				padding-bottom: 0.525em;
+				box-shadow: none;
 			}
 		}
 	}
@@ -102,6 +104,29 @@
 	}
 }
 
+@media all and (max-width: 991px){
+	#pricing {
+		.col-sm-4 {
+			.boxed{
+				&:not([class*='bg-']){
+					&.primary-price-option {
+						min-height: 600px;
+					}
+				}
+			}
+			.btn{
+				font-size: 14px;
+				&[class*='primary'] {
+					font-size: 14px;
+					> .btn__text{
+						margin-left: -4px;
+					}
+				}
+			}
+		}
+	}
+}
+
 @media all and (min-width: 991px){
 	.pricing-2{
 		ul{
@@ -172,6 +197,15 @@
 @media all and (max-width: 767px){
 	#pricing {
 		.col-sm-4 {
+			.boxed{
+				&:not([class*='bg-']){
+					&.primary-price-option, &.secondary-price-option{
+						min-height: inherit;
+						height: inherit;
+					}
+				}
+
+			}
 			.btn{
 				margin-bottom: 20px;
 				&[class*='primary'] {

@@ -6016,7 +6016,18 @@ p .material-icons:first-child {
   background: #FAFAFA;
 }
 #pricing .boxed:not([class*='bg-']) {
-  min-height: 500px;
+  border-radius: 0;
+}
+#pricing .boxed:not([class*='bg-']).primary-price-option {
+  box-shadow: 0 0 10px rgba(22, 32, 32, 0), 0 0 10px rgba(22, 32, 32, 0.22);
+  min-height: 600px;
+}
+#pricing .boxed:not([class*='bg-']).primary-price-option > h3 {
+  margin-top: 25px;
+}
+#pricing .boxed:not([class*='bg-']).secondary-price-option {
+  height: 550px;
+  margin-top: 25px;
 }
 @media all and (min-width: 768px) {
   .switchable .imagebg .boxed {
@@ -6919,7 +6930,12 @@ body.iosBugFixCaret .modal-container > .modal-content.section-modal {
 }
 .modal-instance.block > .btn.contact-us-link {
   background: #4c4b4bc7;
-  border-color: #922cd400;
+  display: block;
+  border: none;
+  border-radius: 2px;
+  padding-top: 0.525em;
+  padding-bottom: 0.525em;
+  position: relative;
 }
 .modal-instance.block > .btn.contact-us-link > .btn__text {
   color: #fff;
@@ -8220,11 +8236,15 @@ label {
   }
 }
 /*! -- Stack Pricing -- */
+#pricing .col-sm-4 .btn {
+  margin-top: 15px;
+}
 #pricing .col-sm-4 .btn[class*='primary'] {
   display: block;
   border: none;
   padding-top: 0.525em;
   padding-bottom: 0.525em;
+  box-shadow: none;
 }
 .pricing {
   transition: 0.3s ease;
@@ -8296,6 +8316,20 @@ label {
 .pricing-1 img + p:first-of-type {
   margin-top: 0;
 }
+@media all and (max-width: 991px) {
+  #pricing .col-sm-4 .boxed:not([class*='bg-']).primary-price-option {
+    min-height: 600px;
+  }
+  #pricing .col-sm-4 .btn {
+    font-size: 14px;
+  }
+  #pricing .col-sm-4 .btn[class*='primary'] {
+    font-size: 14px;
+  }
+  #pricing .col-sm-4 .btn[class*='primary'] > .btn__text {
+    margin-left: -4px;
+  }
+}
 @media all and (min-width: 991px) {
   .pricing-2 ul:first-child {
     margin-top: 4.64285714em;
@@ -8349,6 +8383,11 @@ label {
   }
 }
 @media all and (max-width: 767px) {
+  #pricing .col-sm-4 .boxed:not([class*='bg-']).primary-price-option,
+  #pricing .col-sm-4 .boxed:not([class*='bg-']).secondary-price-option {
+    min-height: inherit;
+    height: inherit;
+  }
   #pricing .col-sm-4 .btn {
     margin-bottom: 20px;
   }
