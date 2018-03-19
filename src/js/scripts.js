@@ -3128,3 +3128,33 @@ mr = (function (mr, $, window, document){
     return mr;
 
 }(mr, jQuery, window, document));
+
+//////////////// Responsive Element Placement
+mr = (function (mr, $, window, document){
+    "use strict";
+
+    mr.reselementplace = mr.reselementplace || {};
+
+    mr.reselementplace.documentReady = function($){
+        changeElementPlacement();
+    };
+
+    $( window ).resize(function() {
+        changeElementPlacement();
+    });
+    
+    function changeElementPlacement(){
+        if($(window).width() < 768)
+        {
+            $(".primary-price-col").insertBefore($(".secondary-price-col:first-of-type"));
+        }
+        else
+        {
+            $(".primary-price-col").insertAfter($(".secondary-price-col:nth-child(2)"));
+        }
+    }
+
+    mr.components.documentReady.push(mr.reselementplace.documentReady);
+    return mr;
+
+}(mr, jQuery, window, document));
