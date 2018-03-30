@@ -105,7 +105,30 @@ export default {
     return {
 
     }
-  }
+  },
+    head: {
+        title: {
+            inner: 'Haystack',
+            separator: '-',
+            complement: 'Contact Us'
+        },
+        meta: [
+            { n: 'description', c: 'Contact Us', id: 'desc' },
+            // Twitter
+            { n: 'twitter:card', c: 'summary_large_image' },
+            { n: 'twitter:title', c: 'Haystack - Contact Us' },
+            { n: 'twitter:description', c: 'Contact Us'},
+            { n: 'twitter:url', c: 'http://www.haystackhq.com/early-access' },
+            { n: 'twitter:site', c: '@haystackdev' },
+            { n: 'twitter:image', c: '/static/img/logo/backgroundHaystack.png' },
+
+            // Facebook / Open Graph
+            { p: 'og:url', c: 'http://www.haystackhq.com/early-access' },
+            { p: 'og:title', c: 'Haystack - Contact Us' },
+            { p: 'og:description', c: 'Contact Us' },
+            { p: 'og:image', c: '/static/img/logo/backgroundHaystack.png' }
+        ]
+    }
 }
 </script>
 <style>

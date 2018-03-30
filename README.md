@@ -8,6 +8,9 @@
 # install dependencies
 npm install
 
+# rebuild the sass binding for your environment
+npm rebuild node-sass
+
 # serve with hot reload at localhost:8080
 npm run dev
 

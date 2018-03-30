@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import VueHead from 'vue-head'
 
 // Components
 import Home from '@/components/Home'
@@ -7,6 +8,7 @@ import NotFound from '@/components/NotFound'
 import ContactUs from '@/components/Contactus'
 import EarlyAccess from '@/components/EarlyAccess'
 
+Vue.use(VueHead)
 Vue.use(Router)
 
 export default new Router({

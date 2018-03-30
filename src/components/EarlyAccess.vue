@@ -87,7 +87,30 @@ export default {
     return {
 
     }
-  }
+  },
+    head: {
+        title: {
+            inner: 'Haystack',
+            separator: '-',
+            complement: 'Early Access'
+        },
+        meta: [
+            { n: 'description', c: 'Get early access to Haystack', id: 'desc' },
+            // Twitter
+            { n: 'twitter:card', c: 'summary_large_image' },
+            { n: 'twitter:title', c: 'Haystack - Early Access' },
+            { n: 'twitter:description', c: 'Get early access to Haystack'},
+            { n: 'twitter:url', c: 'http://www.haystackhq.com/early-access' },
+            { n: 'twitter:site', c: '@haystackdev' },
+            { n: 'twitter:image', c: '/static/img/logo/backgroundHaystack.png' },
+
+            // Facebook / Open Graph
+            { p: 'og:url', c: 'http://www.haystackhq.com/early-access' },
+            { p: 'og:title', c: 'Haystack - Early Access' },
+            { p: 'og:description', c: 'Get early access to Haystack' },
+            { p: 'og:image', c: '/static/img/logo/backgroundHaystack.png' }
+        ]
+    }
 }
 </script>
 <style>
