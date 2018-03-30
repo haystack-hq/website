@@ -126,7 +126,7 @@ body[data-fade_in="on-load"],
 }
 .ui-hero {
     &.title-hero {
-        @extend .haystack-extend-dark-gray-bg;
+        @extend .haystack-extend-dark-bg;
         &.hero-xs {
             .heading {
                 color: $white;
