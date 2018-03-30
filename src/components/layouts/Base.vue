@@ -3,14 +3,13 @@
         <!-- Navbar Fixed + Default -->
         <nav class="navbar navbar-fixed-top navbar-dark ">
             <div class="container">
-
                 <!-- Navbar Logo -->
                 <a class="ui-variable-logo navbar-brand" href="index.html" title="Haystack - Fast simple development environments">
                     <!-- Default Logo -->
-                    <img class="logo-default" src="assets/img/logo/haystack-logo.svg"
+                    <img class="logo-default" src="/static/img/logo/haystack-logo.svg"
                          alt="Haystack - Fast simple development environments" data-uhd>
                     <!-- Transparent Logo -->
-                    <img class="logo-transparent" src="assets/img/logo/haystack-logo.svg"
+                    <img class="logo-transparent" src="/static/img/logo/haystack-logo.svg"
                          alt="Haystack - Fast simple development environments" data-uhd>
                 </a><!-- .navbar-brand -->
 

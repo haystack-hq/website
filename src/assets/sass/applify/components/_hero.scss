@@ -193,7 +193,7 @@
     &.hero-svg-layer-1{
         &::before{
             background-size: cover;
-            background-image: url('../img/svg-layers/svg-layer-1.svg');
+            background-image: url('../../../static/img/svg-layers/svg-layer-1.svg');
             background-position: center center;
             opacity: 0.4;
         }
@@ -202,7 +202,7 @@
         &::before{
             left: -10%;
             right: -10%;
-            background-image: url('../img/svg-layers/svg-layer-2.svg');
+            background-image: url('../../../static/img/svg-layers/svg-layer-2.svg');
             background-position: top center;
             opacity: 0.4;
         }
@@ -211,7 +211,7 @@
         &::before{
             background-size: 1000px;
             background-repeat: repeat;
-            background-image: url('../img/svg-layers/svg-layer-3.svg');
+            background-image: url('../../../static/img/svg-layers/svg-layer-3.svg');
             background-position: center center;
             opacity: 0.3;
         }
@@ -296,7 +296,7 @@
 		display: block;
 		content: '';
 		height: 100%;
-		background: url(../img/svg-layers/waves.svg) bottom no-repeat;
+		background: url(../../../static/img/svg-layers/waves.svg) bottom no-repeat;
 		background-size: contain;
 		position: absolute;
 		bottom: -1px;
@@ -336,7 +336,7 @@
 		display: block;
 		content: '';
 		height: 100%;
-		background: url(../img/svg-layers/curve-layer.svg) bottom no-repeat;
+		background: url(../../../static/img/svg-layers/curve-layer.svg) bottom no-repeat;
 		background-size: contain;
 		position: absolute;
 		bottom: -3px;

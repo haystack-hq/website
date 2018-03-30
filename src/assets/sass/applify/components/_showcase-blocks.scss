@@ -48,6 +48,7 @@
     & img.laptop{
         margin-bottom: -6rem;
 
+
         @include media-breakpoint-down(md){
             margin: 2rem 0 -3rem;
         }

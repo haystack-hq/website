@@ -1,5 +1,5 @@
 <template>
-    <div class="main-wrapper">
+    <layout-base>
         <!-- Main Wrapper -->
         <div class="main" slot="home-content" role="main">
 
@@ -24,7 +24,7 @@
 
             <!-- Intro Image -->
             <div class="section intro-image pt-0">
-                <img src="/static/img/mockups/haystack-hero-shot.png" data-uhd data-max_width="1000"
+                <img src="/static/img/mockups/haystack-hero-shot.png" data-uhd data-max_width="900"
                      class="shadow-xxl responsive-on-lg" alt="Haystack - Fast simple development environments"/>
             </div><!-- .intro-image -->
 
@@ -85,7 +85,7 @@
                         </div>
                         <!-- Image Column -->
                         <div class="col-lg-6 col-md-7 img-block animate" data-show="fade-in-left" data-vertical_center="true">
-                            <img src="/assets/img/descriptive/haystack-pair.svg" alt="Haystack - Fast simple development environments" data-uhd
+                            <img src="/static/img/descriptive/haystack-pair.svg" alt="Haystack - Fast simple development environments" data-uhd
                                  class="img-fluid" data-max_width="460"/>
                         </div>
                     </div><!-- .row -->
@@ -145,59 +145,59 @@
                             <!-- Logo Cloud -->
                             <div class="ui-logos-cloud">
                                 <div data-size="4" class="mt-0 animate" data-show="fade-in">
-                                    <img src="assets/img/3rd-party-logos/drupal.png" data-uhd alt="Drupal"/>
+                                    <img src="/static/img/3rd-party-logos/drupal.png" data-uhd alt="Drupal"/>
                                 </div>
                                 <div data-size="10" class="mt-0 animate" data-show="fade-in">
-                                    <img src="assets/img/3rd-party-logos/angular.svg" data-uhd alt="Angular.js"/>
+                                    <img src="/static/img/3rd-party-logos/angular.svg" data-uhd alt="Angular.js"/>
                                 </div>
                                 <div data-size="7" class="mt-0 animate" data-show="fade-in">
-                                    <img src="assets/img/3rd-party-logos/rubyonrails.png" data-uhd alt="Ruby on Rails"/>
+                                    <img src="/static/img/3rd-party-logos/rubyonrails.png" data-uhd alt="Ruby on Rails"/>
                                 </div>
 
                                 <!-- Flex Break -->
                                 <span class="flex-break"></span>
 
                                 <div data-size="5" class="animate" data-show="fade-in">
-                                    <img src="assets/img/3rd-party-logos/meteor-logo.svg" data-uhd alt="Applif App Landing Page"/>
+                                    <img src="/static/img/3rd-party-logos/meteor-logo.svg" data-uhd alt="Applif App Landing Page"/>
                                 </div>
                                 <div data-size="10" class="animate" data-show="fade-in">
-                                    <img src="assets/img/3rd-party-logos/magento.svg" data-uhd alt="Magento"/>
+                                    <img src="/static/img/3rd-party-logos/magento.svg" data-uhd alt="Magento"/>
                                 </div>
                                 <div data-size="4" class="animate" data-show="fade-in">
-                                    <img src="assets/img/3rd-party-logos/django-logo-positive.svg" data-uhd alt="Applif App Landing Page"/>
+                                    <img src="/static/img/3rd-party-logos/django-logo-positive.svg" data-uhd alt="Applif App Landing Page"/>
                                 </div>
                                 <div data-size="6" class="animate" data-show="fade-in">
-                                    <img src="assets/img/3rd-party-logos/node.png" data-uhd alt="Node.js"/>
+                                    <img src="/static/img/3rd-party-logos/node.png" data-uhd alt="Node.js"/>
                                 </div>
 
                                 <!-- Flex Break -->
                                 <span class="flex-break"></span>
 
                                 <div data-size="8" class="animate" data-show="fade-in">
-                                    <img src="assets/img/3rd-party-logos/react.png" data-uhd alt="Applif App Landing Page"/>
+                                    <img src="/static/img/3rd-party-logos/react.png" data-uhd alt="Applif App Landing Page"/>
                                 </div>
                                 <div data-size="10" class="animate" data-show="fade-in">
-                                    <img src="assets/img/3rd-party-logos/laravel.svg" data-uhd alt="Applif App Landing Page"/>
+                                    <img src="/static/img/3rd-party-logos/laravel.svg" data-uhd alt="Applif App Landing Page"/>
                                 </div>
                                 <div data-size="4" class="animate" data-show="fade-in">
-                                    <img src="assets/img/3rd-party-logos/symfony.svg" data-uhd alt="Applif App Landing Page"/>
+                                    <img src="/static/img/3rd-party-logos/symfony.svg" data-uhd alt="Applif App Landing Page"/>
                                 </div>
 
                                 <!-- Flex Break -->
                                 <span class="flex-break"></span>
 
                                 <div data-size="10" class="animate" data-show="fade-in">
-                                    <img src="assets/img/3rd-party-logos/wordpress.png" data-uhd alt="Applif App Landing Page"/>
+                                    <img src="/static/img/3rd-party-logos/wordpress.png" data-uhd alt="Applif App Landing Page"/>
                                 </div>
                                 <div data-size="7" class="animate" data-show="fade-in">
-                                    <img src="assets/img/3rd-party-logos/pylons.png" data-uhd alt="Applif App Landing Page"/>
+                                    <img src="/static/img/3rd-party-logos/pylons.png" data-uhd alt="Applif App Landing Page"/>
                                 </div>
 
                                 <!-- Flex Break -->
                                 <span class="flex-break"></span>
 
                                 <div data-size="4" class="mb-0 animate" data-show="fade-in">
-                                    <img src="assets/img/3rd-party-logos/Ghost-Logo.svg" data-uhd alt="Applif App Landing Page"/>
+                                    <img src="/static/img/3rd-party-logos/Ghost-Logo.svg" data-uhd alt="Applif App Landing Page"/>
                                 </div>
                             </div><!-- .ui-logo-cloud  -->
 
@@ -222,8 +222,8 @@
                             </div>
                         </div>
                         <div class="col-md-7 col-lg-8">
-                            <img class="responsive-on-sm laptop" src="assets/img/mockups/custom-stack.png" data-uhd
-                                 alt="Haystack - Fast simple development environments" data-max_width="1000"/>
+                            <img class="responsive-on-sm laptop" src="/static/img/mockups/custom-stack.png" data-uhd
+                                 alt="Haystack - Fast simple development environments" data-max_width="900"/>
                         </div>
                     </div>
 
@@ -241,7 +241,7 @@
                             </p>
                         </div>
                         <div class="col-md-6">
-                            <img class="img-responsive" src="assets/img/descriptive/haystack-local.svg" data-uhd
+                            <img class="img-responsive" src="/static/img/descriptive/haystack-local.svg" data-uhd
                                  alt="Haystack - Fast simple development environments"/>
                             <h5 class="text-dark-gray">Local Environments</h5>
                             <ul class="ui-checklist mt-2 text-left">
@@ -257,7 +257,7 @@
                             </ul>
                         </div>
                         <div class="col-md-6">
-                            <img class="img-responsive" src="assets/img/descriptive/haystack-cloud.svg" data-uhd
+                            <img class="img-responsive" src="/static/img/descriptive/haystack-cloud.svg" data-uhd
                                  alt="Haystack - Fast simple development environments"/>
                             <h5 class="text-dark-gray">Cloud Environments</h5>
                             <ul class="ui-checklist mt-2 text-left">
@@ -305,7 +305,7 @@
                                     <!--<a href="#" class="btn-link btn-arrow">Explore Documentation</a>-->
                                 </div>
                                 <div class="col-md-6">
-                                    <img class="responsive-on-xs" src="assets/img/mockups/step1-download-haystack.png" data-uhd
+                                    <img class="responsive-on-xs" src="/static/img/mockups/step1-download-haystack.png" data-uhd
                                          alt="Haystack - Fast simple development environments" data-max_width="464"/>
                                 </div>
                             </div>
@@ -324,7 +324,7 @@
                                     <!--<a href="#" class="btn-link btn-arrow">Explore Prebuilt Stacks</a>-->
                                 </div>
                                 <div class="col-md-6">
-                                    <img class="responsive-on-xs" src="assets/img/mockups/step2-pick-your-stack.png" data-uhd
+                                    <img class="responsive-on-xs" src="/static/img/mockups/step2-pick-your-stack.png" data-uhd
                                          alt="Haystack - Fast simple development environments" data-max_width="445"/>
                                 </div>
                             </div>
@@ -343,7 +343,7 @@
                                     <!--<a href="#" class="btn-link btn-arrow">Explore</a>-->
                                 </div>
                                 <div class="col-sm-6">
-                                    <img class="responsive-on-xs" src="assets/img/mockups/step3-choose-your-cloud.png" data-uhd
+                                    <img class="responsive-on-xs" src="/static/img/mockups/step3-choose-your-cloud.png" data-uhd
                                          alt="Haystack - Fast simple development environments" data-max_width="451"/>
                                 </div>
                             </div>
@@ -362,7 +362,7 @@
                                     <!--<a href="#" class="btn-link btn-arrow">Explore</a>-->
                                 </div>
                                 <div class="col-sm-6">
-                                    <img class="responsive-on-xs" src="assets/img/mockups/step4-code.png" data-uhd
+                                    <img class="responsive-on-xs" src="/static/img/mockups/step4-code.png" data-uhd
                                          alt="Haystack - Fast simple development environments" data-max_width="451"/>
                                 </div>
                             </div>
@@ -401,7 +401,7 @@
                             </div>
                         </div>
                         <div class="col-md-7 col-lg-8">
-                            <img class="responsive-on-sm laptop terminal" src="assets/img/mockups/haystack-cli.png" data-uhd
+                            <img class="responsive-on-sm laptop terminal" src="/static/img/mockups/haystack-cli.png" data-uhd
                                  alt="Haystack - Fast simple development environments" data-max_width="1000"/>
                         </div>
                     </div>
@@ -432,7 +432,7 @@
                                     <h4 class="heading">Cloud</h4>
                                     <!-- Price -->
                                     <div class="price">
-                                        <span class="curency">$</span>
+                                        <span class="currency">$</span>
                                         <span class="price">*</span>
                                         <span class="period">/mo</span>
                                     </div>
@@ -542,15 +542,15 @@
                 </div><!-- .container -->
             </div><!-- .section -->
         </div><!-- .main -->
-    </div>
+    </layout-base>
 </template>
 
 <script>
-import Base from '@/components/layouts/Base'
+import LayoutBase from '@/components/layouts/Base'
 
 export default {
   name: 'Home',
-  components: {Base},
+  components: {LayoutBase},
   data () {
     return {
 

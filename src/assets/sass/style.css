@@ -7225,9 +7225,9 @@ a.text-dark:focus, a.text-dark:hover {
     -khtml-user-select: none;
     user-select: none; }
   .owl-carousel.owl-drag {
-    cursor: url(../img/cursors/openhand.cur), move; }
+    cursor: url(../../../static/img/cursors/openhand.cur), move; }
   .owl-carousel.owl-grab, .owl-carousel:focus {
-    cursor: url(../img/cursors/closedhand.cur), move; }
+    cursor: url(../../../static/img/cursors/closedhand.cur), move; }
   .owl-carousel.owl-rtl {
     direction: rtl; }
   .owl-carousel.owl-rtl .owl-item {
@@ -8132,10 +8132,10 @@ a.text-dark:focus, a.text-dark:hover {
 
 /* 5.2 :: SliderPro Touch Swipe */
 .sp-grab {
-  cursor: url(../img/cursors/openhand.cur), move; }
+  cursor: url(../../../static/img/cursors/openhand.cur), move; }
 
 .sp-grabbing {
-  cursor: url(../img/cursors/closedhand.cur), move; }
+  cursor: url(../../../static/img/cursors/closedhand.cur), move; }
 
 .sp-selectable {
   cursor: default; }
@@ -10185,7 +10185,7 @@ body[data-fade_in="on-load"],
     display: block;
     content: '';
     height: 100%;
-    background: url(../img/svg-layers/curve-layer-gray.svg) bottom no-repeat;
+    background: url(../../../static/img/svg-layers/curve-layer-gray.svg) bottom no-repeat;
     background-size: contain;
     position: absolute;
     bottom: -2px;
@@ -10199,7 +10199,7 @@ body[data-fade_in="on-load"],
 .ui-card.ui-curve .card-body {
   background-color: #f6f7f8; }
 .ui-card.ui-curve.color-card .card-header::after {
-  background: url(../img/svg-layers/curve-layer.svg) bottom no-repeat; }
+  background: url(../../../static/img/svg-layers/curve-layer.svg) bottom no-repeat; }
 .ui-card.ui-curve.color-card .card-body {
   background-color: #FFF; }
 
@@ -10398,7 +10398,7 @@ body[data-fade_in="on-load"],
     display: block;
     content: '';
     height: 100%;
-    background: url(../img/svg-layers/waves2.svg) top no-repeat;
+    background: url(../../../static/img/svg-layers/waves2.svg) top no-repeat;
     background-size: contain;
     position: absolute;
     top: -5px;
@@ -10563,26 +10563,26 @@ body[data-fade_in="on-load"],
         background-size: 1600px; } }
   .ui-hero.hero-svg-layer-1::before {
     background-size: cover;
-    background-image: url("../img/svg-layers/svg-layer-1.svg");
+    background-image: url("../../../static/img/svg-layers/svg-layer-1.svg");
     background-position: center center;
     opacity: 0.4; }
   .ui-hero.hero-svg-layer-2::before {
     left: -10%;
     right: -10%;
-    background-image: url("../img/svg-layers/svg-layer-2.svg");
+    background-image: url("../../../static/img/svg-layers/svg-layer-2.svg");
     background-position: top center;
     opacity: 0.4; }
   .ui-hero.hero-svg-layer-3::before {
     background-size: 1200px;
     background-repeat: repeat;
-    background-image: url("../img/svg-layers/svg-layer-3.svg");
+    background-image: url("../../../static/img/svg-layers/svg-layer-3.svg");
     background-position: center center;
     opacity: 0.3; }
   .ui-hero.hero-svg-layer-4::before {
     left: 10%;
     right: 10%;
     background-size: contain;
-    background-image: url("../img/svg-layers/svg-layer-4.svg");
+    background-image: url("../../../static/img/svg-layers/svg-layer-4.svg");
     background-position: center center; }
     @media (min-width: 992px) {
       .ui-hero.hero-svg-layer-4::before {
@@ -10648,7 +10648,7 @@ body[data-fade_in="on-load"],
     display: block;
     content: '';
     height: 100%;
-    background: url(../img/svg-layers/waves.svg) bottom no-repeat;
+    background: url(../../../static/img/svg-layers/waves.svg) bottom no-repeat;
     background-size: contain;
     position: absolute;
     bottom: -1px;
@@ -10677,7 +10677,7 @@ body[data-fade_in="on-load"],
     display: block;
     content: '';
     height: 100%;
-    background: url(../img/svg-layers/curve-layer.svg) bottom no-repeat;
+    background: url(../../../static/img/svg-layers/curve-layer.svg) bottom no-repeat;
     background-size: contain;
     position: absolute;
     bottom: -3px;
@@ -11165,7 +11165,7 @@ body.modal-open {
   left: -25%;
   right: -25%;
   height: 100%;
-  background: url(../img/svg-layers/waves-layer-a.svg) bottom no-repeat;
+  background: url(../../../static/img/svg-layers/waves-layer-a.svg) bottom no-repeat;
   background-size: contain;
   opacity: 0.75;
   z-index: 1; }

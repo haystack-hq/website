@@ -46,8 +46,8 @@ img.responsive-on-md{
 img.responsive-on-lg{
 	@media(max-width: 1366px){
 		height: auto;
-		width: 100%;
-		max-width: 100%;
+		width: 90%;
+		max-width: 90%;
 	}
 }
 [data-max_width]{
