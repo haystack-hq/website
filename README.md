@@ -1,28 +1,32 @@
-# Development
+# haystack-dashboard
 
-## In order to update SASS and JS, follow these instructions
+> Haystack Dashboard
 
-### Install Node.js if you don't have it
-https://nodejs.org/en/download/package-manager/
+## Build Setup
 
-### Install Grunt / Grunt CLI to your Project
-`$ npm install grunt --save-dev`
+``` bash
+# install dependencies
+npm install
 
-`$ npm install -g grunt-cli`
+# serve with hot reload at localhost:8080
+npm run dev
 
-### Install Grunt Watch
-`$ npm install grunt-contrib-watch --save-dev`
+# build for production with minification
+npm run build
 
-### Install Grunt SASS
-`$ npm install grunt-sass --save-dev`
+# build for production and view the bundle analyzer report
+npm run build --report
 
-### Install Grunt Uglify
-`$ npm install grunt-contrib-uglify --save-dev`
+# run unit tests
+npm run unit
 
-### Run grunt, should be good to go!
-`$ grunt`
+# run e2e tests
+npm run e2e
 
+# run all tests
+npm test
+```
 
-# Publish
-`$ sh publish.sh  (aws credentials in cli required)`
+For better browser debugging, install the Vue.js devtools Chrome extension https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd?hl=en
 
+For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
