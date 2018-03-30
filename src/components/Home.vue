@@ -1,7 +1,7 @@
 <template>
     <layout-base>
         <!-- Main Wrapper -->
-        <div class="main" slot="home-content" role="main">
+        <div class="main" slot="content" role="main">
 
             <!-- Hero -->
             <div class="ui-hero hero-lg hero-center hero-bg ui-curve hero-svg-layer-4 ">
@@ -24,7 +24,7 @@
 
             <!-- Intro Image -->
             <div class="section intro-image pt-0">
-                <img src="/static/img/mockups/haystack-hero-shot.png" data-uhd data-max_width="900"
+                <img src="/static/img/mockups/haystack-hero-shot.png" data-uhd data-max_width="1000"
                      class="shadow-xxl responsive-on-lg" alt="Haystack - Fast simple development environments"/>
             </div><!-- .intro-image -->
 
@@ -223,7 +223,7 @@
                         </div>
                         <div class="col-md-7 col-lg-8">
                             <img class="responsive-on-sm laptop" src="/static/img/mockups/custom-stack.png" data-uhd
-                                 alt="Haystack - Fast simple development environments" data-max_width="900"/>
+                                 alt="Haystack - Fast simple development environments" data-max_width="1000"/>
                         </div>
                     </div>
 

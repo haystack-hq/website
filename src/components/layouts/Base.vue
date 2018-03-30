@@ -45,14 +45,14 @@
             </div><!-- .container -->
         </nav> <!-- nav -->
 
-        <slot name="home-content"></slot>
+        <slot name="content"></slot>
 
         <!-- Footer -->
         <footer class="ui-footer">
             <div class="container pt-5 pb-5">
                 <div class="row">
                     <div class="col-md-4 col-sm-12 footer-about footer-col center-on-sm">
-                        <img src="assets/img/logo/haystack-logo.svg" data-uhd
+                        <img src="/static/img/logo/haystack-logo.svg" data-uhd
                              alt="Haystack - Fast simple development environments"/>
                         <p class="mt-1">
                             Haystack is the fastest and simplest way to spin up a full stack dev environment. We are a group of developers that are helping other developers focus on the code by abstracting away the infrastructure.
