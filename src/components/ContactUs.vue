@@ -88,7 +88,7 @@
             2. Add your longitude to the data-long attribute here
             3. Add your API Key to the GoogleMaps include script at the bottom of this Page
             -->
-            <div id="gmap" class="ui-map" data-lat="47.605409" data-lng="-122.336438" data-marker="assets/img/map/map_marker.png"
+            <div id="gmap" class="ui-map" data-lat="47.605409" data-lng="-122.336438" data-marker="/static/img/map/map_marker.png"
                  data-style="style-1" data-zoom="13"></div>
 
         </div><!-- .main -->
