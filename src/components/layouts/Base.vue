@@ -4,7 +4,7 @@
         <nav class="navbar navbar-fixed-top navbar-dark ">
             <div class="container">
                 <!-- Navbar Logo -->
-                <a class="ui-variable-logo navbar-brand" href="index.html" title="Haystack - Fast simple development environments">
+                <a class="ui-variable-logo navbar-brand" href="/" title="Haystack - Fast simple development environments">
                     <!-- Default Logo -->
                     <img class="logo-default" src="/static/img/logo/haystack-logo.svg"
                          alt="Haystack - Fast simple development environments" data-uhd>
@@ -23,20 +23,20 @@
                             <a href="#" data-scrollto="pricing">Pricing</a>
                         </li>
                         <li>
-                            <a href="http://blog.haystack.com" target="_blank">Blog</a>
+                            <a href="http://blog.haystackhq.com" target="_blank">Blog</a>
                         </li>
                         <li>
-                            <a href="contact.html" target="_blank">Contact us</a>
+                            <a href="/contact-us" target="_blank">Contact us</a>
                         </li>
                         <li class="d-md-block d-lg-none d-sm-block d-xs-block">
-                            <a href="#" target="_blank"><span class="github"></span></a>
+                            <a href="https://github.com/haystack-hq" target="_blank"><span class="github"></span></a>
                         </li>
                     </ul><!--.navbar-nav -->
                 </div><!--.ui-navigation -->
 
                 <!-- Navbar Button -->
-                <a href="#" target="_blank" class="navbar-github"><span class="github"></span></a>
-                <a href="early-access.html" target="_blank"
+                <a href="https://github.com/haystack-hq" target="_blank" class="navbar-github"><span class="github"></span></a>
+                <a href="/early-access" target="_blank"
                    class="btn early-access btn-sm pull-right">Get Early Access</a>
 
                 <!-- Navbar Toggle -->
@@ -45,6 +45,7 @@
             </div><!-- .container -->
         </nav> <!-- nav -->
 
+        <slot name="title"></slot>
         <slot name="content"></slot>
 
         <!-- Footer -->
@@ -62,13 +63,13 @@
                         <h6 class="heading footer-heading">Navigation</h6>
                         <ul class="footer-nav">
                             <li>
-                                <a href="early-access.html" target="_blank">Get Early Access</a>
+                                <a href="/early-access" target="_blank">Get Early Access</a>
                             </li>
                             <li>
                                 <a href="#">Docs</a>
                             </li>
                             <li>
-                                <a href="contact.html" target="_blank">Contact Us</a>
+                                <a href="/contact-us" target="_blank">Contact Us</a>
                             </li>
                             <li>
                                 <a href="http://blog.haystackhq.com">Blog</a>
@@ -100,7 +101,7 @@
                             <a href="https://twitter.com/haystackdev" target="_blank" class="btn bg-white btn-circle shadow-md">
                                 <span class="fa fa-twitter"></span>
                             </a>
-                            <a href="#" target="_blank" class="btn btn-circle shadow-md">
+                            <a href="https://github.com/haystack-hq" target="_blank" class="btn btn-circle shadow-md">
                                 <span class="github"></span>
                             </a>
                         </div>
@@ -118,26 +119,6 @@
                                 &copy; 2018 <a href="http://haystackhq.com" target="_blank" title="Haystack">Haystack</a>
                             </p>
                         </div>
-                        <!-- Info -->
-                        <!--<div class="col-sm-6 text-right">-->
-                        <!--<ul class="footer-nav">-->
-                        <!--<li>-->
-                        <!--<a href="#">-->
-                        <!--Privacy Policy-->
-                        <!--</a>-->
-                        <!--</li>-->
-                        <!--<li>-->
-                        <!--<a href="#">-->
-                        <!--Terms &amp; Conditions-->
-                        <!--</a>-->
-                        <!--</li>-->
-                        <!--<li>-->
-                        <!--<a href="#">-->
-                        <!--FAQ-->
-                        <!--</a>-->
-                        <!--</li>-->
-                        <!--</ul>-->
-                        <!--</div>-->
                     </div>
                 </div><!-- .container -->
             </div><!-- .footer-copyright -->

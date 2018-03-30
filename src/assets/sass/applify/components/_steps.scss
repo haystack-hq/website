@@ -46,7 +46,7 @@
             margin-left: 0;
             width: 4px;
             border-radius: 4px;
-            background-color: lighten($gray, 30%);
+            background-color: $gray-base;
             
             @include breakpoint(smd){
 				left: 50%;

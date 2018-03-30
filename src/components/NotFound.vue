@@ -29,9 +29,8 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
     .navbar.transparent {
-        background-color: #4f2a8a !important;
+        background-color: #0277BD !important;
     }
-
 </style>
 
 <style scoped>

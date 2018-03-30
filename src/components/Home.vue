@@ -41,21 +41,21 @@
                     </div><!-- .section-heading -->
                     <div class="row">
                         <div class="col-sm-4 ui-icon-block">
-                            <div class="icon icon-lg icon-circle icon-layers text-red"></div>
+                            <div class="icon icon-lg icon-circle icon-layers text-orange"></div>
                             <h4 class="text-dark-gray">Prebuilt Popular Stacks</h4>
                             <p>
                                 Use our pre-built stacks to create development environments for popular frameworks and platforms — and freely modify them to suit your own development needs.
                             </p>
                         </div>
                         <div class="col-sm-4 ui-icon-block">
-                            <div class="icon icon-lg icon-circle icon-equalizer text-red"></div>
+                            <div class="icon icon-lg icon-circle icon-equalizer text-orange"></div>
                             <h4 class="text-dark-gray">Your Own Tools</h4>
                             <p>
                                 Haystack does not force you to use a web IDE to have a cloud dev environment. Use your own tools, Haystack will take care of the rest.
                             </p>
                         </div>
                         <div class="col-sm-4 ui-icon-block">
-                            <div class="icon icon-lg icon-circle icon-grid text-red"></div>
+                            <div class="icon icon-lg icon-circle icon-grid text-orange"></div>
                             <h4 class="text-dark-gray">Local or Cloud</h4>
                             <p>
                                 Use your own machine’s resources, or embrace the power of the cloud. Haystack simplifies the setup process so you can rapidly deploy to multiple environments without losing focus on code.
@@ -93,7 +93,7 @@
             </div><!-- .section -->
 
             <!-- Stacks Section -->
-            <div id="stacks" class="section bg-light">
+            <div id="stacks" class="section bg-gray">
                 <div class="container">
                     <div class="row">
 
@@ -218,7 +218,7 @@
                                 <p>
                                     If your application requires something more custom you can start with a prebuilt stack and then modify it or you can build a stack from scratch.  <a href="#">View docs</a>.
                                 </p>
-                                <a href="early-access.html" target="_blank" class="btn early-access">Get Early Access</a>
+                                <a href="/early-access" target="_blank" class="btn early-access">Get Early Access</a>
                             </div>
                         </div>
                         <div class="col-md-7 col-lg-8">
@@ -277,7 +277,7 @@
             </div>
 
             <!-- Steps Section -->
-            <div id="running-a-stack" class="section bg-light">
+            <div id="running-a-stack" class="section bg-gray">
                 <div class="container">
                     <!-- Section Heading -->
                     <div class="section-heading center">
@@ -296,7 +296,7 @@
                             <span class="step-number">1</span>
                             <div class="row">
                                 <div class="col-md-6" data-vertical_center="true">
-                                    <h4 class="heading text-dark-gray">
+                                    <h4 class="heading">
                                         Download & Install Haystack
                                     </h4>
                                     <p class="paragraph">
@@ -315,7 +315,7 @@
                             <span class="step-number">2</span>
                             <div class="row">
                                 <div class="col-md-6" data-vertical_center="true">
-                                    <h4 class="heading text-dark-gray">
+                                    <h4 class="heading">
                                         Choose new stack from the menu
                                     </h4>
                                     <p class="paragraph">
@@ -334,7 +334,7 @@
                             <span class="step-number">3</span>
                             <div class="row">
                                 <div class="col-md-6" data-vertical_center="true">
-                                    <h4 class="heading text-dark-gray">
+                                    <h4 class="heading">
                                         Select mode (local, cloud) and click start
                                     </h4>
                                     <p class="paragraph">
@@ -353,7 +353,7 @@
                             <span class="step-number">4</span>
                             <div class="row">
                                 <div class="col-md-6" data-vertical_center="true">
-                                    <h4 class="heading text-dark-gray">
+                                    <h4 class="heading">
                                         Dev against your stack
                                     </h4>
                                     <p class="paragraph">
@@ -397,7 +397,7 @@
                                         <h6 class="heading text-dark-gray">SSH Into the services</h6>
                                     </li>
                                 </ul>
-                                <a href="early-access.html" target="_blank" class="btn early-access">Get Early Access</a>
+                                <a href="/early-access" target="_blank" class="btn early-access">Get Early Access</a>
                             </div>
                         </div>
                         <div class="col-md-7 col-lg-8">
@@ -410,11 +410,11 @@
             </div><!-- .section -->
 
             <!-- Pricing Section -->
-            <div id="pricing" class="section bg-light">
+            <div id="pricing" class="section bg-gray">
                 <div class="container">
                     <!-- Section Heading -->
                     <div class="section-heading center">
-                        <h2 class="heading text-dark-gray">
+                        <h2 class="heading">
                             Pricing
                         </h2>
                         <p class="paragraph">
@@ -454,7 +454,7 @@
                                             * Choose a cloud provider
                                         </li>
                                     </ul>
-                                    <a href="contact.html" target="_blank" class="btn shadow-md">Contact Us</a>
+                                    <a href="/contact-us" target="_blank" class="btn shadow-md">Contact Us</a>
                                 </div>
                             </div>
                         </div>
@@ -488,7 +488,7 @@
                                             <br/>
                                         </li>
                                     </ul>
-                                    <a href="early-access.html" target="_blank" class="btn early-access shadow-md">Get Early Access</a>
+                                    <a href="/early-access" target="_blank" class="btn early-access shadow-md">Get Early Access</a>
                                 </div>
                             </div>
                         </div>
@@ -522,7 +522,7 @@
                                             Team Settings + Controls
                                         </li>
                                     </ul>
-                                    <a href="contact.html" target="_blank" class="btn shadow-md">Contact Us</a>
+                                    <a href="/contact-us" target="_blank" class="btn shadow-md">Contact Us</a>
                                 </div>
                             </div>
                         </div>

@@ -78,9 +78,11 @@ body[data-fade_in="on-load"],
 
 //  ======= Haystack Basics =======
 
+
+
 .haystack-extend-primary-bg {
     color: $white;
-    background-color: $purple;
+    background-color: $blue;
     h1, h2, h3, h4, h5, h6, p, a, .paragraph {
         color: $white;
     }
@@ -89,22 +91,26 @@ body[data-fade_in="on-load"],
     }
 }
 
-.haystack-extend-primary-text {  color: $purple;  }
-.haystack-extend-dark-text {  color: $darkpurple;  }
+.haystack-extend-primary-text {  color: $blue;  }
+.haystack-extend-dark-gray-bg {
+    background-color: $gray-dark;
+    color: $white;
+}
+.haystack-extend-dark-gray-text {  color: $gray-dark;  }
 .haystack-extend-dark-bg {
     color: $white;
-    background-color: $darkpurple;
+    background-color: darken($blue, 7.5%);
     h1, h2, h3, h4, h5, h6, p, a, .paragraph {  color: $white;  }
 }
 
-.haystack-extend-pink-bg {
+.haystack-extend-orange-bg {
     color: $white;
-    background-color: $pink;
+    background-color: $orange;
     h1, h2, h3, h4, h5, h6, p, a, .paragraph {  color: $white;  }
 }
 
 .haystack-extend-primary-btn {
-    background-color: $pink;
+    background-color: $orange;
     color: $white;
 }
 
@@ -119,12 +125,86 @@ body[data-fade_in="on-load"],
     @extend .haystack-extend-primary-bg;
 }
 .ui-hero {
+    &.title-hero {
+        @extend .haystack-extend-dark-gray-bg;
+        &.hero-xs {
+            .heading {
+                color: $white;
+            }
+        }
+    }
     @media (max-width: 767px) {
         font-weight: 100;
         font-size: 1.2rem;
     }
 }
 
+.section {
+    &.bg-light {
+        color: $gray-dark;
+        .heading {
+            color: $gray-dark;
+        }
+    }
+    &.bg-gray {
+        color: $gray-dark;
+        .heading, .paragraph, h1, h2, h3, h4, h5, h6 {
+            color: $gray-dark;
+        }
+        .ui-icon-blocks {
+            &.ui-blocks-v {
+                &.icons-sm {
+                    .ui-icon-block {
+                        > .icon {
+                            color: $orange;
+                        }
+                    }
+                }
+            }
+        }
+        .ui-pricing-card {
+            .ui-card {
+                .card-body{
+                    color: $gray-dark;
+                }
+                .card-header {
+                    .heading, .sub-heading, .price{
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+    &.laptop-showcase {
+        h2, p {
+            color: $gray-dark;
+        }
+        .ui-checklist {
+            li {
+                color: $gray-dark;
+            }
+        }
+
+
+    }
+    &.contact-section {
+        h1, h2, h3, p {
+            color: $gray-dark;
+        }
+        .form-control {
+            background-color: lighten($blue, 50%);
+            color: $gray-dark;
+            &:focus {
+                background-color: $white;
+            }
+        }
+        .form-card {
+            h1, h2, h3, p {
+                color: $white;
+            }
+        }
+    }
+}
 
 .ui-pricing-card {
     .btn {
@@ -133,7 +213,7 @@ body[data-fade_in="on-load"],
     }
     &.active {
         .card-header{
-            @extend .haystack-extend-pink-bg;
+            @extend .haystack-extend-orange-bg;
         }
     }
 }
@@ -154,7 +234,7 @@ body[data-fade_in="on-load"],
 
 .contact-section {
     .heading {
-        @extend .haystack-extend-dark-text;
+        @extend .haystack-extend-dark-gray-text;
     }
 }
 

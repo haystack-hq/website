@@ -1,0 +1,97 @@
+<template>
+    <layout-base>
+        <div slot="title">
+            <!-- Hero -->
+            <div class="ui-hero title-hero hero-xs">
+                <div class="container">
+                    <h3 class="heading">
+                        Get Early Access
+                    </h3>
+                </div><!-- .container -->
+            </div><!-- .hero -->
+        </div>
+        <!-- Main Wrapper -->
+        <div class="main" slot="content" role="main">
+            <!--  Section -->
+            <div class="section contact-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <div class="section-heading mb-2">
+                                <h3 class="heading text-indigo">Get it Early</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                                    ut labore et dolore magna aliqua.
+                                </p>
+                            </div>
+                            <!-- Form -->
+                            <form autocomplete="on" id="contact-form" name="contact-form">
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <!-- Name Input -->
+                                        <input autocomplete="name" class="input form-control" data-validation="required"
+                                               data-validation-error-msg="Please enter your full name." name="name"
+                                               placeholder="Your Name *">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <!-- Email Input -->
+                                            <input autocomplete="email" class="input form-control" data-validation="required"
+                                                   data-validation-error-msg="Please enter your email address." name="email"
+                                                   placeholder="Email Address *">
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-block shadow-md">Submit</button>
+                            </form>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="ui-card form-card shadow-xl">
+                                <div class="card-header pb-0">
+                                    <h3 class="heading">Contact Info</h3>
+                                </div>
+                                <div class="card-body">
+                                    <ul class="ui-icon-blocks ui-blocks-v">
+                                        <li class="ui-icon-block">
+                                            <span class="icon icon-clock"></span>
+                                            <p>Mon - Fri 09:00am - 5:00pm</p>
+                                        </li>
+                                        <li class="ui-icon-block">
+                                            <span class="icon icon-envelope"></span>
+                                            <p>support@haystackhq.com</p>
+                                        </li>
+                                        <li class="ui-icon-block">
+                                            <span class="icon icon-pin"></span>
+                                            <p>107 Spring St., <br>Seattle, <br>Washington, <br>98104</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- .container -->
+            </div><!-- .section -->
+        </div><!-- .main -->
+    </layout-base>
+</template>
+
+<script>
+import LayoutBase from '@/components/layouts/Base'
+
+export default {
+  name: 'Home',
+  components: {LayoutBase},
+  data () {
+    return {
+
+    }
+  }
+}
+</script>
+<style>
+    .navbar.transparent {
+        background-color: #0277BD !important;
+    }
+</style>
