@@ -91,6 +91,11 @@ body[data-fade_in="on-load"],
     }
 }
 
+.haystack-extend-lightblue-bg {
+    color: $white;
+    background-color: $lightblue;
+}
+
 .haystack-extend-primary-text {  color: $blue;  }
 .haystack-extend-dark-gray-bg {
     background-color: $gray-dark;
@@ -126,7 +131,7 @@ body[data-fade_in="on-load"],
 }
 .ui-hero {
     &.title-hero {
-        @extend .haystack-extend-dark-bg;
+        @extend .haystack-extend-lightblue-bg;
         &.hero-xs {
             .heading {
                 color: $white;

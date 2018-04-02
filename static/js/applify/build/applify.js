@@ -1,5 +1,4 @@
 $( document ).ready(function() {
-    console.log( "ready!" );
     (function($, undefined) {
         "use strict";
         var doc = $(document), body = $("body"), win = $(window), breaks = {
@@ -526,6 +525,18 @@ $( document ).ready(function() {
                 }
             });
         }
+        if ($("form#early-access-form").length > 0) {
+            $.validate({
+                form: "form#early-access-form",
+                validateOnBlur: true,
+                modules: "sanitize",
+                scrollToTopOnError: false,
+                onSuccess: function($form) {
+                    submit_form($form, "mailer/submit-contact-form.php");
+                    return false;
+                }
+            });
+        }
         if ($("form#sign-up-form").length > 0) {
             $.validate({
                 form: "form#sign-up-form",
@@ -546,34 +557,81 @@ $( document ).ready(function() {
                 form_data[this.name] = this.value;
             });
             var form_json = JSON.stringify(form_data);
-            $.ajax({
-                url: script,
-                async: true,
-                cache: false,
-                type: "POST",
-                dataType: "json",
-                data: {
-                    data: form_json
-                },
-                success: function(data) {
-                    if (data.status === "success") {
-                        the_form.trigger("reset");
-                        the_form.find("button").text("Sent");
-                        var msg = $('<span class="help-block form-success" style="margin-bottom: 0;margin-top: 1rem"/>').text(data.message);
-                        if ($("#contact-form").length > 0) {
-                            msg = $('<span class="help-block form-success" style="margin-bottom: 1rem;margin-top: 1rem"/>').text(data.message);
-                            msg.insertBefore(the_form.find("button"));
-                        } else {
-                            the_form.append(msg);
+
+            if(!the_form.is("form#contact-form")){
+                $.ajax({
+                    url: script,
+                    async: true,
+                    cache: false,
+                    type: "POST",
+                    dataType: "json",
+                    data: {
+                        data: form_json
+                    },
+                    success: function(data) {
+                        if (data.status === "success") {
+                            the_form.trigger("reset");
+                            the_form.find("button").text("Sent");
+                            var msg = $('<span class="help-block form-success" style="margin-bottom: 0;margin-top: 1rem"/>').text(data.message);
+                            if ($("#contact-form").length > 0) {
+                                msg = $('<span class="help-block form-success" style="margin-bottom: 1rem;margin-top: 1rem"/>').text(data.message);
+                                msg.insertBefore(the_form.find("button"));
+                            } else {
+                                the_form.append(msg);
+                            }
+                        } else if (data.status === "error") {
+                            console.error("Error: " + data.message);
                         }
-                    } else if (data.status === "error") {
-                        console.error("Error: " + data.message);
+                    },
+                    error: function() {
+                        console.error("Error: Ajax Fatal Error");
                     }
-                },
-                error: function() {
-                    console.error("Error: Ajax Fatal Error");
-                }
-            });
+                });
+            } else {
+                var data = the_form.serializeArray();
+                var name = null;
+                var email = null;
+                var message = null;
+                var status = null;
+
+                data.map(function(v) {
+                        if (v.name === "name") { name = v.value; }
+                        if (v.name === "email") { email = v.value; }
+                        if (v.name === "message") { message = v.value; }
+                        if (v.name === "status") { status = v.value; }
+                    }
+                );
+
+                Email.send(
+                    email,
+                    "support@haystackhq.com",
+                    "Message for HaystackHQ Support",
+                    "Message from " + name + ": " + "<br/><br/>" + message,
+                    {
+                        token: "350ff9a8-4f69-4c2d-9949-0b587ec06dab",
+                        callback: function done(data) {
+                            if(data === "OK") {
+                                the_form.trigger("reset");
+                                the_form.find("button").text("Sent");
+                                var msg = $('<span class="help-block form-success" style="margin-bottom: 0;margin-top: 1rem"/>').text(message);
+                                if ($("#contact-form").length > 0) {
+                                    msg = $('<span class="help-block form-success" style="margin-bottom: 1rem;margin-top: 1rem"/>').text(message);
+                                    msg.insertBefore(the_form.find("button"));
+                                } else {
+                                    the_form.append(msg);
+                                }
+
+                            } else if (data.status === "error") {
+                                console.error("Error: " + data.message);
+                            }
+                        },
+                        error: function() {
+                            console.error("Error: Ajax Fatal Error");
+                        }
+                    }
+                );
+            }
+
         }
         if ($(".ui-turncate-text").length) {
             var txtElements = $(".ui-turncate-text");

@@ -25,7 +25,7 @@
                                 </p>
                             </div>
                             <!-- Form -->
-                            <form autocomplete="on" id="contact-form" name="contact-form">
+                            <form autocomplete="on" id="early-access-form" name="contact-form">
                                 <div class="form-group">
                                     <div class="form-group">
                                         <!-- Name Input -->
