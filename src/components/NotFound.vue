@@ -23,29 +23,28 @@ export default {
 
     }
   },
-    head: {
-        title: {
-            inner: 'Haystack',
-            separator: '-',
-            complement: 'Not Found'
-        },
-        meta: [
-            { n: 'description', c: 'Full-stack development environments can be simple, repeatable and reliable. Use our pre-built development environments for any of the most popular stacks, or create your own Haystack file.', id: 'desc' },
-            // Twitter
-            { n: 'twitter:card', c: 'summary_large_image' },
-            { n: 'twitter:title', c: 'Haystack' },
-            { n: 'twitter:description', c: 'Full-stack development environments can be simple, repeatable and reliable. Use our pre-built development environments for any of the most popular stacks, or create your own Haystack file.'},
-            { n: 'twitter:url', c: 'http://www.haystackhq.com' },
-            { n: 'twitter:site', c: '@haystackdev' },
-            { n: 'twitter:image', c: '/static/img/logo/backgroundHaystack.png' },
-
-            // Facebook / Open Graph
-            { p: 'og:url', c: 'http://www.haystackhq.com' },
-            { p: 'og:title', c: 'Haystack' },
-            { p: 'og:description', c: 'Full-stack development environments can be simple, repeatable and reliable. Use our pre-built development environments for any of the most popular stacks, or create your own Haystack file.' },
-            { p: 'og:image', c: '/static/img/logo/backgroundHaystack.png' }
-        ]
-    }
+  head: {
+    title: {
+      inner: 'Haystack',
+      separator: '-',
+      complement: 'Not Found'
+    },
+    meta: [
+      { n: 'description', c: 'Full-stack development environments can be simple, repeatable and reliable. Use our pre-built development environments for any of the most popular stacks, or create your own Haystack file.', id: 'desc' },
+      // Twitter
+      { n: 'twitter:card', c: 'summary_large_image' },
+      { n: 'twitter:title', c: 'Haystack' },
+      { n: 'twitter:description', c: 'Full-stack development environments can be simple, repeatable and reliable. Use our pre-built development environments for any of the most popular stacks, or create your own Haystack file.' },
+      { n: 'twitter:url', c: 'http://www.haystackhq.com' },
+      { n: 'twitter:site', c: '@haystackdev' },
+      { n: 'twitter:image', c: '/static/img/logo/backgroundHaystack.png' },
+      // Facebook / Open Graph
+      { p: 'og:url', c: 'http://www.haystackhq.com' },
+      { p: 'og:title', c: 'Haystack' },
+      { p: 'og:description', c: 'Full-stack development environments can be simple, repeatable and reliable. Use our pre-built development environments for any of the most popular stacks, or create your own Haystack file.' },
+      { p: 'og:image', c: '/static/img/logo/backgroundHaystack.png' }
+    ]
+  }
 }
 </script>
 
@@ -58,7 +57,7 @@ export default {
 
 <style scoped>
     .main {
-        display: flex;
+    display: flex;
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
         flex-direction: row;
