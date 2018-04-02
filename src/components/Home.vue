@@ -4,7 +4,7 @@
         <div class="main" slot="content" role="main">
 
             <!-- Hero -->
-            <div class="ui-hero hero-lg hero-center hero-bg ui-curve hero-svg-layer-4 ">
+            <div class="ui-hero hero-lg hero-center hero-bg ui-curve hero-svg-background">
                 <div class="container pb-4">
                     <div class="row pt-2 pb-8">
                         <div class="col-sm-12" data-vertical_center="true" data-vertical_offset="16">

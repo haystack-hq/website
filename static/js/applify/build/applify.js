@@ -477,7 +477,6 @@ $( document ).ready(function() {
             });
         }
         $("[data-max_width]").each(function() {
-            console.log('HERE');
             $(this).css({
                 "max-width": $(this).attr("data-max_width") + "px"
             });
