@@ -20,8 +20,7 @@
                             <div class="section-heading mb-2">
                                 <h3 class="heading text-indigo">Send a message</h3>
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                                    ut labore et dolore magna aliqua.
+                                    Let us know your questions, interests, and needs! We'll get back to you as soon as possible.
                                 </p>
                             </div>
                             <!-- Form -->

@@ -20,8 +20,7 @@
                             <div class="section-heading mb-2">
                                 <h3 class="heading text-indigo">Get it Early</h3>
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                                    ut labore et dolore magna aliqua.
+                                    Haystack v 1.0 is almost here--sign up for early access to be kept in the loop for available downloads, webinars, and user testing events.
                                 </p>
                             </div>
                             <!-- Form -->
