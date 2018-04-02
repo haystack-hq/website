@@ -19,7 +19,12 @@
 .help-block.form-error{
     margin-top: .25rem;
     font-size: .875rem;
+    display: block;
+    padding: 10px;
     color: $danger;
+    a {
+        color: $lightblue;
+    }
 }
 
 .help-block.form-success{

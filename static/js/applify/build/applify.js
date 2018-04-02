@@ -532,7 +532,8 @@ $( document ).ready(function() {
                 modules: "sanitize",
                 scrollToTopOnError: false,
                 onSuccess: function($form) {
-                    submit_form($form, "mailer/submit-contact-form.php");
+                    // prepareAjaxAction($form);
+                    submit_form($form, $form.attr('action'));
                     return false;
                 }
             });
@@ -556,38 +557,45 @@ $( document ).ready(function() {
             $.each(the_form.serializeArray(), function() {
                 form_data[this.name] = this.value;
             });
-            var form_json = JSON.stringify(form_data);
+            // var form_json = JSON.stringify(form_data);
 
-            if(!the_form.is("form#contact-form")){
+            if(the_form.is("form#early-access-form")){
                 $.ajax({
                     url: script,
-                    async: true,
+                    crossDomain: true,
+                    data: the_form.serialize(),
+                    method: "GET",
                     cache: false,
-                    type: "POST",
-                    dataType: "json",
-                    data: {
-                        data: form_json
-                    },
+                    dataType: 'json',
+                    contentType: 'application/json; charset=utf-8',
                     success: function(data) {
-                        if (data.status === "success") {
+                        if (data.result !== "success"){
+                            console.log(data.msg);
+                            the_form.trigger("reset");
+                            the_form.find("button").text("Submit");
+                            var error = $('<span class="help-block form-error" style="margin-bottom: 0;margin-top: 1rem"/>').html(data.msg);
+                            the_form.append(error);
+                            resetForm(the_form);
+                        } else {
                             the_form.trigger("reset");
                             the_form.find("button").text("Sent");
-                            var msg = $('<span class="help-block form-success" style="margin-bottom: 0;margin-top: 1rem"/>').text(data.message);
+                            var msg = $('<span class="help-block form-success" style="margin-bottom: 0;margin-top: 1rem"/>').text('Thanks for signing up. We\'ll be in touch!');
                             if ($("#contact-form").length > 0) {
-                                msg = $('<span class="help-block form-success" style="margin-bottom: 1rem;margin-top: 1rem"/>').text(data.message);
+                                msg = $('<span class="help-block form-success" style="margin-bottom: 1rem;margin-top: 1rem"/>').text('Thanks for signing up. We\'ll be in touch!');
                                 msg.insertBefore(the_form.find("button"));
                             } else {
                                 the_form.append(msg);
                             }
-                        } else if (data.status === "error") {
-                            console.error("Error: " + data.message);
+                            resetForm(the_form);
                         }
                     },
                     error: function() {
-                        console.error("Error: Ajax Fatal Error");
+                        console.log("Error: Ajax Fatal Error");
                     }
                 });
-            } else {
+            }
+
+            if(the_form.is("form#contact-form")){
                 var data = the_form.serializeArray();
                 var name = null;
                 var email = null;
@@ -633,6 +641,39 @@ $( document ).ready(function() {
             }
 
         }
+
+        function prepareAjaxAction(form){
+            var action = $(form).attr('action');
+
+            // Alter action for a Mail Chimp-compatible ajax request url.
+            if(/list-manage\.com/.test(action)){
+                action = action.replace('/post?', '/post-json?') + "&c=?";
+                if(action.substr(0,2) === "//"){
+                    action = 'http:' + action;
+                }
+            }
+
+            // Alter action for a Campaign Monitor-compatible ajax request url.
+            if(/createsend\.com/.test(action)){
+                action = action + '?callback=?';
+            }
+
+            // Set action on the form
+            $(form).attr('action', action);
+
+            console.log('end of prepareAjaxAction');
+        }
+
+         function resetForm(form) {
+             form = $(form);
+             form.get(0).reset();
+             form.find('.input-radio, .input-checkbox').removeClass('checked');
+             form.find('[data-default-value]').filter('[type="text"],[type="number"],[type="email"],[type="url"],[type="search"],[type="tel"]').each(function () {
+                 var elem = jQuery(this);
+                 elem.val(elem.attr('data-default-value'));
+             });
+         }
+
         if ($(".ui-turncate-text").length) {
             var txtElements = $(".ui-turncate-text");
             var resizeThreshold2;
@@ -662,6 +703,121 @@ $( document ).ready(function() {
                 });
             });
         }
+
+        // Treat MailChimp forms
+        $('form[action*="list-manage.com"]').each(function() {
+
+            var form = $(this);
+            console.log('IN THIS');
+            console.log(form);
+            // Override browser validation and allow us to use our own
+            form.attr('novalidate', 'novalidate');
+
+            // Give each text input a placeholder value
+            if (!form.is('.form--no-placeholders')) {
+                form.find('input:not([checkbox]):not([radio])').each(function () {
+                    var $input = $(this);
+                    if (typeof $input.attr('placeholder') !== typeof undefined) {
+                        if ($input.attr('placeholder') === "") {
+                            if ($input.siblings('label').length) {
+                                $input.attr('placeholder', $input.siblings('label').first().text());
+                                if (form.is('.form--no-labels')) {
+                                    $input.siblings('label').first().remove();
+                                }
+                            }
+                        }
+                    } else if ($input.siblings('label').length) {
+                        $input.attr('placeholder', $input.siblings('label').first().text());
+                        if (form.is('.form--no-labels')) {
+                            $input.siblings('label').first().remove();
+                        }
+                    }
+                });
+            } else {
+                form.find('input[placeholder]').removeAttr('placeholder');
+            }
+
+            if (form.is('.form--no-labels')) {
+                form.find('input:not([checkbox]):not([radio])').each(function () {
+                    var $input = $(this);
+                    if ($input.siblings('label').length) {
+                        $input.siblings('label').first().remove();
+                    }
+                });
+            }
+
+            // Wrap select elements in template code
+
+            form.find('select').wrap('<div class="input-select"></div>');
+
+            // Wrap checboxes elements in template code
+
+            form.find('input[type="checkbox"]').each(function () {
+                var checkbox = jQuery(this);
+                var parent = checkbox.parent();
+                var label = parent.find('label');
+                if (!label.length) {
+                    label = jQuery('<label>');
+                }
+                checkbox.before('<div class="input-checkbox"></div>');
+                parent.find('.input-checkbox').append(checkbox);
+                parent.find('.input-checkbox').append(label);
+            });
+
+            // Wrap radio elements in template code
+
+            form.find('input[type="radio"]').each(function () {
+                var radio = jQuery(this);
+                var parent = radio.closest('li');
+                var label = parent.find('label');
+                if (!label.length) {
+                    label = jQuery('<label>');
+                }
+                radio.before('<div class="input-radio"></div>');
+                parent.find('.input-radio').prepend(radio);
+                parent.find('.input-radio').prepend(label);
+            });
+
+            // Convert MailChimp input[type="submit"] to div.button
+
+            form.find('input[type="submit"]').each(function () {
+                var submit = $(this);
+
+                var newButton = jQuery('<button/>').attr('type', 'submit').attr('class', submit.attr('class')).addClass('btn').text(submit.attr('value'));
+
+                if (submit.parent().is('div.clear')) {
+                    submit.unwrap();
+                }
+
+                newButton.insertBefore(submit);
+                submit.remove();
+            });
+
+            form.find('input').each(function () {
+                var input = $(this);
+                if (input.hasClass('required')) {
+                    input.removeClass('required').addClass('validate-required');
+                }
+            });
+
+            form.find('input[type="email"]').removeClass('email').addClass('validate-email');
+
+            form.find('#mce-responses').remove();
+
+            form.find('.mc-field-group').each(function () {
+                $(this).children().first().unwrap();
+            });
+
+            form.find('[required]').attr('required', 'required').addClass('validate-required');
+
+            form.addClass('form--active');
+
+            prepareAjaxAction(form);
+
+        });
+
+
+
         win.on("scroll", function() {
             var cur_pos = $(this).scrollTop();
             $(".section").each(function() {

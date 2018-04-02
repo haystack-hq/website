@@ -24,12 +24,12 @@
                                 </p>
                             </div>
                             <!-- Form -->
-                            <form autocomplete="on" id="early-access-form" name="contact-form">
+                            <form method="post" action="https://haystackhq.us17.list-manage.com/subscribe/post?u=e1d72687f4318d88bda6ea018&amp;id=cb7cb01ee6" id="early-access-form" name="contact-form">
                                 <div class="form-group">
                                     <div class="form-group">
                                         <!-- Name Input -->
                                         <input autocomplete="name" class="input form-control" data-validation="required"
-                                               data-validation-error-msg="Please enter your full name." name="name"
+                                               data-validation-error-msg="Please enter your full name." name="FNAME" id="mce-FNAME"
                                                placeholder="Your Name *">
                                     </div>
                                 </div>
@@ -38,12 +38,15 @@
                                         <div class="col-sm-12">
                                             <!-- Email Input -->
                                             <input autocomplete="email" class="input form-control" data-validation="required"
-                                                   data-validation-error-msg="Please enter your email address." name="email"
+                                                   data-validation-error-msg="Please enter your email address." name="EMAIL"
                                                    placeholder="Email Address *">
                                         </div>
                                     </div>
                                 </div>
                                 <button type="submit" class="btn btn-block shadow-md">Submit</button>
+                                <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                                    <input type="text" name="b_77142ece814d3cff52058a51f_f300c9cce8" tabindex="-1" value="">
+                                </div>
                             </form>
                         </div>
                         <div class="col-md-5">
