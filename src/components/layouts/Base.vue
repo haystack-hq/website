@@ -134,6 +134,12 @@ export default {
     return {
 
     }
+  },
+  head: {
+    script: [
+      { src: 'https://www.googletagmanager.com/gtag/js?' + process.env.GA_ID, async: true },
+      { inner: 'window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag(\'js\', new Date());gtag(\'config\', \'' + process.env.GA_ID + '\');' }
+    ]
   }
 }
 </script>

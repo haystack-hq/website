@@ -3,6 +3,9 @@
 import Vue from 'vue'
 import App from './App'
 import router from './routes'
+import VueHead from 'vue-head'
+
+Vue.use(VueHead)
 
 Vue.config.productionTip = false
 

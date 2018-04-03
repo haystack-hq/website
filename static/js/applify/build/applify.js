@@ -569,8 +569,6 @@ $( document ).ready(function() {
                     contentType: 'application/json; charset=utf-8',
                     success: function(data) {
                         if (data.result !== "success"){
-                            console.log(data.msg);
-                            the_form.trigger("reset");
                             the_form.find("button").text("Submit");
                             var error = $('<span class="help-block form-error" style="margin-bottom: 0;margin-top: 1rem"/>').html(data.msg);
                             the_form.append(error);
@@ -586,6 +584,12 @@ $( document ).ready(function() {
                                 the_form.append(msg);
                             }
                             resetForm(the_form);
+                            //log with analytics
+                            gtag('event', 'sign_up', {
+                                'method': 'Early Access Form',
+                                'event_category': 'Submit',
+                                'event_label': 'Early Access Campaign'
+                            });
                         }
                     },
                     error: function() {
@@ -620,9 +624,10 @@ $( document ).ready(function() {
                             if(data === "OK") {
                                 the_form.trigger("reset");
                                 the_form.find("button").text("Sent");
-                                var msg = $('<span class="help-block form-success" style="margin-bottom: 0;margin-top: 1rem"/>').text(message);
+                                var success = 'Thanks for contacting us. We\'ll get back to you as soon as possible!';
+                                var msg = $('<span class="help-block form-success" style="margin-bottom: 0;margin-top: 1rem"/>').text(success);
                                 if ($("#contact-form").length > 0) {
-                                    msg = $('<span class="help-block form-success" style="margin-bottom: 1rem;margin-top: 1rem"/>').text(message);
+                                    msg = $('<span class="help-block form-success" style="margin-bottom: 1rem;margin-top: 1rem"/>').text(success);
                                     msg.insertBefore(the_form.find("button"));
                                 } else {
                                     the_form.append(msg);
