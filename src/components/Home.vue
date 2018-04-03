@@ -218,7 +218,7 @@
                                 <p>
                                     If your application requires something more custom you can start with a prebuilt stack and then modify it or you can build a stack from scratch.  <a href="#">View docs</a>.
                                 </p>
-                                <a href="/early-access" target="_blank" class="btn early-access">Get Early Access</a>
+                                <a href="/early-access" class="btn early-access">Get Early Access</a>
                             </div>
                         </div>
                         <div class="col-md-7 col-lg-8">
@@ -397,7 +397,7 @@
                                         <h6 class="heading text-dark-gray">SSH Into the services</h6>
                                     </li>
                                 </ul>
-                                <a href="/early-access" target="_blank" class="btn early-access">Get Early Access</a>
+                                <a href="/early-access" class="btn early-access">Get Early Access</a>
                             </div>
                         </div>
                         <div class="col-md-7 col-lg-8">
@@ -454,7 +454,7 @@
                                             * Choose a cloud provider
                                         </li>
                                     </ul>
-                                    <a href="/contact-us" target="_blank" class="btn shadow-md">Contact Us</a>
+                                    <a href="/contact-us" class="btn shadow-md">Contact Us</a>
                                 </div>
                             </div>
                         </div>
@@ -488,7 +488,7 @@
                                             <br/>
                                         </li>
                                     </ul>
-                                    <a href="/early-access" target="_blank" class="btn early-access shadow-md">Get Early Access</a>
+                                    <a href="/early-access" class="btn early-access shadow-md">Get Early Access</a>
                                 </div>
                             </div>
                         </div>
@@ -522,7 +522,7 @@
                                             Team Settings + Controls
                                         </li>
                                     </ul>
-                                    <a href="/contact-us" target="_blank" class="btn shadow-md">Contact Us</a>
+                                    <a href="/contact-us" class="btn shadow-md">Contact Us</a>
                                 </div>
                             </div>
                         </div>

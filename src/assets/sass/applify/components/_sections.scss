@@ -4,12 +4,21 @@
 */
 .section {
 	position: relative;
-	padding: 3rem 0 3rem;
+	padding: 4rem 0 4rem;
 	z-index: 1;
     
     &.section-sm {
         padding: 4rem 0;
     }
+}
+
+.no-hero {
+	> .section {
+		padding: 7.5rem 0 4rem;
+		@media (max-width: 767px) {
+			padding: 5.5rem 0 4rem;
+		}
+	}
 }
 
 .section.ui-showcase-section{

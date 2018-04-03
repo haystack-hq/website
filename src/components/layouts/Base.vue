@@ -16,19 +16,19 @@
                 <!-- Navbar Navigation -->
                 <div class="ui-navigation navbar-right">
                     <ul class="nav navbar-nav">
-                        <li>
+                        <li class="menu-link docs">
                             <a href="#">Docs</a>
                         </li>
-                        <li>
-                            <a href="#" data-scrollto="pricing">Pricing</a>
+                        <li class="menu-link pricing">
+                            <a href="/#pricing">Pricing</a>
                         </li>
-                        <li>
-                            <a href="http://blog.haystackhq.com" target="_blank">Blog</a>
+                        <li class="menu-link blog">
+                            <a href="http://blog.haystackhq.com">Blog</a>
                         </li>
-                        <li>
-                            <a href="/contact-us" target="_blank">Contact us</a>
+                        <li class="menu-link contact">
+                            <a href="/contact-us">Contact us</a>
                         </li>
-                        <li class="d-md-block d-lg-none d-sm-block d-xs-block">
+                        <li class="d-md-block d-lg-none d-sm-block d-xs-block menu-link git">
                             <a href="https://github.com/haystack-hq" target="_blank"><span class="github"></span></a>
                         </li>
                     </ul><!--.navbar-nav -->
@@ -36,7 +36,7 @@
 
                 <!-- Navbar Button -->
                 <a href="https://github.com/haystack-hq" target="_blank" class="navbar-github"><span class="github"></span></a>
-                <a href="/early-access" target="_blank"
+                <a href="/early-access"
                    class="btn early-access btn-sm pull-right">Get Early Access</a>
 
                 <!-- Navbar Toggle -->
@@ -63,13 +63,13 @@
                         <h6 class="heading footer-heading">Navigation</h6>
                         <ul class="footer-nav">
                             <li>
-                                <a href="/early-access" target="_blank">Get Early Access</a>
+                                <a href="/early-access">Get Early Access</a>
                             </li>
                             <li>
                                 <a href="#">Docs</a>
                             </li>
                             <li>
-                                <a href="/contact-us" target="_blank">Contact Us</a>
+                                <a href="/contact-us">Contact Us</a>
                             </li>
                             <li>
                                 <a href="http://blog.haystackhq.com">Blog</a>
@@ -116,7 +116,7 @@
                         <!-- Copyright -->
                         <div class="col-sm-6 center-on-sm">
                             <p>
-                                &copy; 2018 <a href="http://haystackhq.com" target="_blank" title="Haystack">Haystack</a>
+                                &copy; 2018 <a href="http://haystackhq.com" title="Haystack">Haystack</a>
                             </p>
                         </div>
                     </div>

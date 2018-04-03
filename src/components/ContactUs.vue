@@ -1,24 +1,14 @@
 <template>
     <layout-base>
-        <div slot="title">
-            <!-- Hero -->
-            <div class="ui-hero title-hero hero-xs">
-                <div class="container">
-                    <h3 class="heading">
-                        Early Access
-                    </h3>
-                </div><!-- .container -->
-            </div><!-- .hero -->
-        </div>
         <!-- Main Wrapper -->
-        <div class="main" slot="content" role="main">
+        <div class="main no-hero" slot="content" role="main">
             <!--  Section -->
             <div class="section contact-section">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-7">
                             <div class="section-heading mb-2">
-                                <h3 class="heading text-indigo">Send a message</h3>
+                                <h1 class="heading">Contact Us</h1>
                                 <p>
                                     Let us know your questions, interests, and needs! We'll get back to you as soon as possible.
                                 </p>
@@ -52,11 +42,11 @@
                                 <div class="form-group">
                                     <textarea class="input form-control" data-validation="required" data-validation-error-msg="Please leave a message." name="message" placeholder="Your Message" rows="3"></textarea>
                                 </div>
-                                <button type="submit" class="btn btn-block shadow-md">Submit</button>
+                                <button type="submit" class="btn btn-block">Submit</button>
                             </form><!-- Form -->
                         </div>
                         <div class="col-md-5">
-                            <div class="ui-card form-card shadow-xl">
+                            <div class="ui-card form-card">
                                 <div class="card-header pb-0">
                                     <h3 class="heading">Contact Info</h3>
                                 </div>
@@ -72,7 +62,8 @@
                                         </li>
                                         <li class="ui-icon-block">
                                             <span class="icon icon-pin"></span>
-                                            <p>107 Spring St., <br>Seattle, <br>Washington, <br>98104</p>
+                                            <p>107 Spring St. <br>
+                                                Seattle, WA 98104</p>
                                         </li>
                                     </ul>
                                 </div>

@@ -1,24 +1,14 @@
 <template>
     <layout-base>
-        <div slot="title">
-            <!-- Hero -->
-            <div class="ui-hero title-hero hero-xs">
-                <div class="container">
-                    <h3 class="heading">
-                        Get Early Access
-                    </h3>
-                </div><!-- .container -->
-            </div><!-- .hero -->
-        </div>
         <!-- Main Wrapper -->
-        <div class="main" slot="content" role="main">
+        <div class="main no-hero" slot="content" role="main">
             <!--  Section -->
             <div class="section contact-section">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-7">
                             <div class="section-heading mb-2">
-                                <h3 class="heading text-indigo">Get it Early</h3>
+                                <h1 class="heading">Get it Early</h1>
                                 <p>
                                     Haystack v 1.0 is almost here--sign up for early access to be kept in the loop for available downloads, webinars, and user testing events.
                                 </p>
@@ -43,14 +33,14 @@
                                         </div>
                                     </div>
                                 </div>
-                                <button type="submit" class="btn btn-block shadow-md">Submit</button>
+                                <button type="submit" class="btn btn-block">Submit</button>
                                 <div style="position: absolute; left: -5000px;" aria-hidden="true">
                                     <input type="text" name="b_77142ece814d3cff52058a51f_f300c9cce8" tabindex="-1" value="">
                                 </div>
                             </form>
                         </div>
                         <div class="col-md-5">
-                            <div class="ui-card form-card shadow-xl">
+                            <div class="ui-card form-card">
                                 <div class="card-header pb-0">
                                     <h3 class="heading">Contact Info</h3>
                                 </div>
@@ -66,7 +56,8 @@
                                         </li>
                                         <li class="ui-icon-block">
                                             <span class="icon icon-pin"></span>
-                                            <p>107 Spring St., <br>Seattle, <br>Washington, <br>98104</p>
+                                            <p>107 Spring St. <br>
+                                                Seattle, WA 98104</p>
                                         </li>
                                     </ul>
                                 </div>

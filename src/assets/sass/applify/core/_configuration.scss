@@ -14,7 +14,7 @@ $green: #19d9b4;
 $lime: #84ce65;
 $lime2: #92d275;
 $orange: #EF6C00;
-$red: #fe60a1;
+$red: #e40808;
 $white: #fff;
 
 $dark: rgb(84, 84, 111);
@@ -162,7 +162,7 @@ $btn-warning-bg:                 $warning !default;
 $btn-warning-border:             darken($btn-warning-bg, 5%) !default;
 $btn-danger-color:               #fff !default;
 $btn-danger-bg:                  $danger !default;
-$btn-danger-border:              darken($btn-danger-bg, 5%) !default;
+$btn-danger-border:              $btn-danger-bg;
 $btn-link-disabled-color:        $gray-light !default;
 $btn-border-radius:         50rem !default;
 $btn-border-radius-lg:        50rem !default;

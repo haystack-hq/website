@@ -144,6 +144,24 @@ body[data-fade_in="on-load"],
     }
 }
 
+.form-control{
+    color: $gray-dark;
+    background-color: $white;
+    border: solid 1px #c2c6c7;
+    border-radius: 0.2rem;
+    &:focus {
+        color: $gray-dark;
+        background-color: $white;
+        border-color: #035e96;
+    }
+}
+.form-control {
+
+    &:focus {
+
+    }
+}
+
 .section {
     &.bg-light {
         color: $gray-dark;
@@ -194,14 +212,7 @@ body[data-fade_in="on-load"],
     }
     &.contact-section {
         h1, h2, h3, p {
-            color: $gray-dark;
-        }
-        .form-control {
-            background-color: lighten($blue, 50%);
-            color: $gray-dark;
-            &:focus {
-                background-color: $white;
-            }
+            color: $blue;
         }
         .form-card {
             h1, h2, h3, p {

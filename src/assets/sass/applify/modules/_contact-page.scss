@@ -12,7 +12,7 @@
 .contact-section .form-card{
     margin-top: 4rem;
     @include media-breakpoint-up(md){
-        margin-top: -2rem;
+        margin-top: 0;
     }
 }
 
