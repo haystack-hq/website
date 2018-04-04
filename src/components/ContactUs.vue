@@ -27,15 +27,11 @@
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <!-- Email Input -->
-                                            <input autocomplete="email" class="input form-control" data-validation="required"
-                                                   data-validation-error-msg="Please enter your email address." name="email"
-                                                   placeholder="Email Address *">
+                                            <input autocomplete="email" class="input form-control" data-validation="email" name="email" placeholder="Email Address *">
                                         </div>
                                         <div class="col-sm-6">
                                             <!-- Phone Input -->
-                                            <input autocomplete="tel" class="input form-control" data-validation="required"
-                                                   data-validation-error-msg="Please enter your phone number." name="phone"
-                                                   placeholder="Phone Number *">
+                                            <input autocomplete="tel" class="input form-control" name="phone" placeholder="Phone Number (not required)">
                                         </div>
                                     </div>
                                 </div>

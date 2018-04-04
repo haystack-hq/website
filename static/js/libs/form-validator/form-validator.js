@@ -1896,8 +1896,8 @@
       requiredField: 'This is a required field',
       requiredFields: 'You have not answered all required fields',
       badTime: 'You have not given a correct time',
-      badEmail: 'You have not given a correct e-mail address',
-      badTelephone: 'You have not given a correct phone number',
+      badEmail: 'Please enter a valid email address',
+      badTelephone: 'Please enter a valid phone number',
       badSecurityAnswer: 'You have not given a correct answer to the security question',
       badDate: 'You have not given a correct date',
       lengthBadStart: 'The input value must be between ',
@@ -1993,20 +1993,33 @@
   });
 
   /*
-   * Validate domain name
+   * Validate phone number
    */
   $.formUtils.addValidator({
-    name: 'domain',
+    name: 'phone',
     validatorFunction: function (val) {
-      return val.length > 0 &&
-        val.length <= 253 && // Including sub domains
-        !(/[^a-zA-Z0-9]/.test(val.slice(-2))) && !(/[^a-zA-Z0-9]/.test(val.substr(0, 1))) && !(/[^a-zA-Z0-9\.\-]/.test(val)) &&
-        val.split('..').length === 1 &&
-        val.split('.').length > 1;
+        var phoneRGEX = /^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$/;
+        return phoneRGEX.test(val);
     },
     errorMessage: '',
-    errorMessageKey: 'badDomain'
+    errorMessageKey: 'badTelephone'
   });
+
+    /*
+     * Validate domain name
+     */
+    $.formUtils.addValidator({
+        name: 'domain',
+        validatorFunction: function (val) {
+            return val.length > 0 &&
+                val.length <= 253 && // Including sub domains
+                !(/[^a-zA-Z0-9]/.test(val.slice(-2))) && !(/[^a-zA-Z0-9]/.test(val.substr(0, 1))) && !(/[^a-zA-Z0-9\.\-]/.test(val)) &&
+                val.split('..').length === 1 &&
+                val.split('.').length > 1;
+        },
+        errorMessage: '',
+        errorMessageKey: 'badDomain'
+    });
 
   /*
    * Validate required

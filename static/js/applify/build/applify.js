@@ -531,7 +531,6 @@ $( document ).ready(function() {
                 modules: "sanitize",
                 scrollToTopOnError: false,
                 onSuccess: function($form) {
-                    // prepareAjaxAction($form);
                     submit_form($form, $form.attr('action'));
                     return false;
                 }
