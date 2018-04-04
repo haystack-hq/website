@@ -27,9 +27,7 @@
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <!-- Email Input -->
-                                            <input autocomplete="email" class="input form-control" data-validation="required"
-                                                   data-validation-error-msg="Please enter your email address." name="EMAIL"
-                                                   placeholder="Email Address *">
+                                            <input autocomplete="email" class="input form-control" data-validation="email"name="EMAIL" placeholder="Email Address *">
                                         </div>
                                     </div>
                                 </div>
