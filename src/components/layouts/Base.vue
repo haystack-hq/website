@@ -83,9 +83,7 @@
                             <div class="form-group">
                                 <div class="input-group">
                                     <!-- Email Input -->
-                                    <input autocomplete="email" class="input form-control" data-validation="required"
-                                           data-validation-error-msg="Please enter your email" name="email"
-                                           placeholder="Email">
+                                    <input autocomplete="email" class="input form-control" data-validation="email" name="email" placeholder="Email">
                                     <div class="input-group-append">
                                         <!-- Submit Button -->
                                         <button class="btn ">Subscribe <span class="fa fa-send"></span>
