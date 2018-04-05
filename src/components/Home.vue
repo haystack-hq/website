@@ -33,7 +33,7 @@
                 <div class="container ui-icon-blocks ui-blocks-h icons-lg">
                     <div class="section-heading cente">
                         <h2 class="heading text-dark-gray">
-                            What is Haystack?
+                            What is Haystack??
                         </h2>
                         <p class="paragraph">
                             Haystack is a file. It is a file that describes your entire stack. Think of it as a blueprint for the infrastructure of your application. You define your application in a single file, and can track it in version control. Your co-workers and contributors can easily replicate the entire environment with the <a href="#">hs start</a> command.
