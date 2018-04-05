@@ -1,0 +1,338 @@
+/**
+* 13. Base
+* ----------------------------------------------------------------------- *
+*/
+html {
+    font-size: 14px;
+    font-weight: 400;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100%;
+}
+
+@include media-breakpoint-up(md){
+    html {
+        font-size: 15px;
+    }
+}
+@include media-breakpoint-up(lg){
+    html {
+        font-size: 16px;
+    }
+}
+
+.main{
+	overflow: hidden;
+}
+body[data-fade_in="on-load"],
+[data-show]{
+	opacity: 0;
+}
+*:focus {
+    outline: 0!important;
+}
+
+.flex-break{
+    flex-basis: 100%;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+.center-on-xs{
+    @include media-breakpoint-down(xs){
+        text-align: center;
+    }
+}
+.center-on-sm{
+    @include media-breakpoint-down(sm){
+        text-align: center;
+    }
+}
+.center-on-md{
+    @include media-breakpoint-down(md){
+        text-align: center;
+    }
+}
+
+@include media-breakpoint-only(sm){
+    .container{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+[data-vertical_center="true"]{
+    display: flex ;
+    flex-direction: column ;
+    justify-content: center ;
+}
+.section.z-index-2{
+    z-index: 2;
+}
+.section.z-index-3{
+    z-index: 3;
+}
+
+//  ======= Haystack Basics =======
+
+
+
+.haystack-extend-primary-bg {
+    color: $white;
+    background-color: $blue;
+    h1, h2, h3, h4, h5, h6, p, a, .paragraph {
+        color: $white;
+    }
+    .ui-video-toggle {
+        span {  color: $white;  }
+    }
+}
+
+.haystack-extend-lightblue-bg {
+    color: $white;
+    background-color: $lightblue;
+}
+
+.haystack-extend-primary-text {  color: $blue;  }
+.haystack-extend-dark-gray-bg {
+    background-color: $gray-dark;
+    color: $white;
+}
+.haystack-extend-dark-gray-text {  color: $gray-dark;  }
+.haystack-extend-dark-bg {
+    color: $white;
+    background-color: darken($blue, 7.5%);
+    h1, h2, h3, h4, h5, h6, p, a, .paragraph {  color: $white;  }
+}
+
+.haystack-extend-orange-bg {
+    color: $white;
+    background-color: $orange;
+    h1, h2, h3, h4, h5, h6, p, a, .paragraph {  color: $white;  }
+}
+
+.haystack-extend-primary-btn {
+    background-color: $orange;
+    color: $white;
+}
+
+.ui-hero,
+.navbar,
+.navbar-fixed-top,
+#sharable,
+#local-cloud,
+.ui-pricing-card .card-header,
+.footer-copyright
+{
+    @extend .haystack-extend-primary-bg;
+}
+.ui-hero {
+    &.title-hero {
+        @extend .haystack-extend-lightblue-bg;
+        &.hero-xs {
+            .heading {
+                color: $white;
+            }
+        }
+    }
+    @media (max-width: 767px) {
+        font-weight: 100;
+        font-size: 1.2rem;
+    }
+}
+
+.form-control{
+    color: $gray-dark;
+    background-color: $white;
+    border: solid 1px #c2c6c7;
+    border-radius: 0.2rem;
+    &:focus {
+        color: $gray-dark;
+        background-color: $white;
+        border-color: #035e96;
+    }
+}
+.form-control {
+
+    &:focus {
+
+    }
+}
+
+.section {
+    &.bg-light {
+        color: $gray-dark;
+        .heading {
+            color: $gray-dark;
+        }
+    }
+    &.bg-gray {
+        color: $gray-dark;
+        .heading, .paragraph, h1, h2, h3, h4, h5, h6 {
+            color: $gray-dark;
+        }
+        .ui-icon-blocks {
+            &.ui-blocks-v {
+                &.icons-sm {
+                    .ui-icon-block {
+                        > .icon {
+                            color: $orange;
+                        }
+                    }
+                }
+            }
+        }
+        .ui-pricing-card {
+            .ui-card {
+                .card-body{
+                    color: $gray-dark;
+                }
+                .card-header {
+                    .heading, .sub-heading, .price{
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+    &.laptop-showcase {
+        h2, p {
+            color: $gray-dark;
+        }
+        .ui-checklist {
+            li {
+                color: $gray-dark;
+            }
+        }
+
+
+    }
+    &.contact-section {
+        h1, h2, h3, p {
+            color: $blue;
+        }
+        .form-card {
+            h1, h2, h3, p {
+                color: $white;
+            }
+        }
+    }
+}
+
+.ui-pricing-card {
+    .btn {
+        background-color: $gray-dark;
+        color: $white;
+    }
+    &.active {
+        .card-header{
+            @extend .haystack-extend-orange-bg;
+        }
+    }
+}
+
+.ui-footer,
+.ui-steps .step-number,
+.ui-card.form-card
+{
+    @extend .haystack-extend-dark-bg;
+
+        .ui-icon-blocks
+        {
+            .ui-icon-block > .icon {
+                color: $white;
+        }
+    }
+}
+
+.contact-section {
+    .heading {
+        @extend .haystack-extend-dark-gray-text;
+    }
+}
+
+.ui-steps .step-number {
+    &:before {
+        border-radius: 100%;
+        width: 60px;
+        height: 60px;
+        top: -10px;
+        left: -10px;
+        content: ' ';
+        position: absolute;
+        opacity: 0.25;
+        z-index: -1;
+        background: linear-gradient(45deg, #8089ff 0%, #54ceff 100%)
+    }
+}
+
+.btn.early-access,
+.ui-pricing-card .btn.early-access,
+.ui-hero .ui-video-toggle .icon,
+.contact-section button,
+.input-group-append button
+{
+    @extend .haystack-extend-primary-btn;
+}
+
+.navbar{
+    .btn.early-access {
+        @media (max-width: 350px){
+            font-size: .7rem;
+        }
+    }
+}
+
+.btn.btn-circle .fa {
+    @extend .haystack-extend-primary-text;
+
+}
+
+.pt-0, .section.pt-0{
+    padding: 3rem 0 4rem !important;
+}
+
+.laptop-showcase img.laptop.terminal {
+    margin-bottom: -2rem;
+    max-width: 750px !important;
+}
+@media (min-width: $screen-md) {
+    .pt-0.intro-image {
+        padding: 0 0 4rem !important;
+    }
+}
+
+@media (max-width: $screen-sm-max) {
+
+    #stacks {
+        padding: 2rem 0 0;
+    }
+    #build-your-own,
+    #cli
+    {
+        text-align: center;
+    }
+    #local-cloud{
+        .ui-checklist {
+            margin-left: 2rem;
+        }
+    }
+    #cli {
+        .ui-checklist {
+            li {
+                padding-left: 0;
+                &:before {
+                    content: '';
+                }
+            }
+        }
+    }
+    img.responsive-on-lg {
+        width: 90%;
+    }
+}
+
+
