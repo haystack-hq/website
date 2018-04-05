@@ -26,7 +26,7 @@
                             <a href="http://blog.haystackhq.com">Blog</a>
                         </li>
                         <li class="menu-link contact">
-                            <a href="/contact-us">Contact us</a>
+                            <a href="/contact-us">Contact Us</a>
                         </li>
                         <li class="d-md-block d-lg-none d-sm-block d-xs-block menu-link git">
                             <a href="https://github.com/haystack-hq" target="_blank"><span class="github"></span></a>
