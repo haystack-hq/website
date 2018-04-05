@@ -4,7 +4,7 @@ import Router from 'vue-router'
 // Components
 import Home from '@/components/Home'
 import NotFound from '@/components/NotFound'
-import ContactUs from '@/components/Contactus'
+import ContactUs from '@/components/ContactUs'
 import EarlyAccess from '@/components/EarlyAccess'
 
 Vue.use(Router)
