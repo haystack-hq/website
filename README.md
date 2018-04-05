@@ -1,6 +1,3 @@
-# haystack-dashboard
-
-> Haystack Dashboard
 
 ## Build Setup
 
