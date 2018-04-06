@@ -16,9 +16,11 @@
                 <!-- Navbar Navigation -->
                 <div class="ui-navigation navbar-right">
                     <ul class="nav navbar-nav">
+                        <!--
                         <li class="menu-link docs">
                             <a href="#">Docs</a>
                         </li>
+                        -->
                         <li class="menu-link pricing">
                             <a href="/#pricing">Pricing</a>
                         </li>
@@ -65,9 +67,11 @@
                             <li>
                                 <a href="/early-access">Get Early Access</a>
                             </li>
+                            <!--
                             <li>
                                 <a href="#">Docs</a>
                             </li>
+                            -->
                             <li>
                                 <a href="/contact-us">Contact Us</a>
                             </li>
@@ -77,21 +81,20 @@
                         </ul>
                     </div>
                     <div class="col-md-4 offset-md-1 col-sm-6 footer-col center-on-sm">
+                        <!--
                         <h6 class="heading footer-heading">Newsletter</h6>
-                        <!-- Form -->
                         <form autocomplete="on" id="sign-up-form" name="sign-up-form">
                             <div class="form-group">
                                 <div class="input-group">
-                                    <!-- Email Input -->
                                     <input autocomplete="email" class="input form-control" data-validation="email" name="email" placeholder="Email">
                                     <div class="input-group-append">
-                                        <!-- Submit Button -->
                                         <button class="btn ">Subscribe <span class="fa fa-send"></span>
                                         </button>
                                     </div>
                                 </div>
                             </div>
                         </form>
+                       -->
                         <div>
                             <a href="https://www.facebook.com/haystackhq" target="_blank" class="btn bg-white btn-circle shadow-md">
                                 <span class="fa fa-facebook"></span>
