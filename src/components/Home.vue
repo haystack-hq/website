@@ -216,7 +216,7 @@
                                     Build your own stack
                                 </h2>
                                 <p>
-                                    If your application requires something more custom you can start with a prebuilt stack and then modify it or you can build a stack from scratch.  <a href="#">View docs</a>.
+                                    If your application requires something more custom you can start with a prebuilt stack and then modify it or you can build a stack from scratch.  <!--<a href="#">View docs</a>-->.
                                 </p>
                                 <a href="/early-access" class="btn early-access">Get Early Access</a>
                             </div>
