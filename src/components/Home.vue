@@ -14,9 +14,11 @@
 
                             <h3 class="text-white">The best way to start developing a full stack application</h3>
                             <!-- * Replace data-video with your youtube video id -->
+                          <!--
                             <a href="#" class="ui-video-toggle mt-4" data-video="1C75bKax4Eg">
                                 <span class="icon fa fa-play"></span> <span>How Haystack Works</span>
                             </a>
+                            -->
                         </div>
                     </div><!-- .row -->
                 </div><!-- .container -->
