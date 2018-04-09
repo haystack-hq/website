@@ -518,7 +518,7 @@
                                             Local + Cloud Environments
                                         </li>
                                         <li>
-                                            Your own Cloud Account
+                                            Your Own Cloud Account
                                         </li>
                                         <li>
                                             Team Settings + Controls
