@@ -50,7 +50,7 @@
                                     <ul class="ui-icon-blocks ui-blocks-v">
                                         <li class="ui-icon-block">
                                             <span class="icon icon-clock"></span>
-                                            <p>Mon - Fri 09:00am - 5:00pm</p>
+                                            <p>Mon - Fri 9AM to 5PM PT</p>
                                         </li>
                                         <li class="ui-icon-block">
                                             <span class="icon icon-envelope"></span>
