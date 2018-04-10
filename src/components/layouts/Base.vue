@@ -95,7 +95,7 @@
                             </div>
                         </form>
                         <div>
-                            <a href="https://www.facebook.com/haystackhq" target="_blank" class="btn bg-white btn-circle shadow-md">
+                            <a href="https://www.facebook.com/haystackdev" target="_blank" class="btn bg-white btn-circle shadow-md">
                                 <span class="fa fa-facebook"></span>
                             </a>
                             <a href="https://twitter.com/haystackdev" target="_blank" class="btn bg-white btn-circle shadow-md">
@@ -116,7 +116,7 @@
                         <!-- Copyright -->
                         <div class="col-sm-6 center-on-sm">
                             <p>
-                                &copy; 2018 <a href="http://haystackhq.com" title="Haystack">Haystack</a>
+                                &copy; 2018 <a href="/" title="Haystack">Haystack</a>
                             </p>
                         </div>
                     </div>
