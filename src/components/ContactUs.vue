@@ -63,7 +63,7 @@ import LayoutBase from '@/components/layouts/Base'
 import ContactInfo from '@/components/includes/ContactInfo'
 
 export default {
-  name: 'Contact Us',
+  name: 'ContactUs',
   components: {LayoutBase, ContactInfo},
   data () {
     return {
