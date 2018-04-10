@@ -156,7 +156,7 @@
 .navbar {
 	&.transparent, &.transparent.dark, &.transparent.light, &.transparent.bg-primary{
 		box-shadow: none;
-		background-color: transparent;
+		background-color: transparent !important;
         &:not(.text-dark){
             & .navbar-brand {
                 color: #FFF;
