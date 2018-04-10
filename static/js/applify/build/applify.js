@@ -643,9 +643,10 @@ $( document ).ready(function() {
                             the_form.find("button").text("Sent");
                             formMsgClear(the_form);
                             var msg = $('<span class="help-block form-success" style="margin-bottom: 0;margin-top: 1rem"/>').text('Thanks for signing up!');
-                            if ($("#contact-form").length > 0) {
+                            if ($("#sign-up-form").length > 0) {
                                 msg = $('<span class="help-block form-success" style="margin-bottom: 1rem;margin-top: 1rem"/>').text('Thanks for signing up!');
-                                msg.insertBefore(the_form.find("button"));
+                                // msg.insertAfter(the_form.find("button"));
+                                the_form.after(msg);
                             } else {
                                 the_form.append(msg);
                             }
