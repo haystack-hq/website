@@ -1,8 +1,6 @@
 import Vue from 'vue'
-import router from '@/routes'
 import { shallow } from '@vue/test-utils'
 import Base from '@/components/layouts/Base'
-import http from 'http'
 
 describe('Base', () => {
   let wrapper
