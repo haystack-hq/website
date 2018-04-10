@@ -16,7 +16,7 @@
 import LayoutBase from '@/components/layouts/Base'
 
 export default {
-  name: 'Home',
+  name: 'NotFound',
   components: {LayoutBase},
   data () {
     return {

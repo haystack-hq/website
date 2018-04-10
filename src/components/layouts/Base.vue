@@ -61,7 +61,7 @@
                             Haystack is the fastest and simplest way to spin up a full stack dev environment. We are a group of developers that are helping other developers focus on the code by abstracting away the infrastructure.
                         </p>
                     </div>
-                    <div class="col-md-2 offset-md-1 col-sm-6 center-on-xs footer-col">
+                    <div class="col-md-2 offset-md-1 col-sm-12 center-on-sm footer-col">
                         <h6 class="heading footer-heading">Navigation</h6>
                         <ul class="footer-nav">
                             <li>
@@ -80,21 +80,20 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-md-4 offset-md-1 col-sm-6 footer-col center-on-sm">
-                        <!--
+                    <div class="col-md-4 offset-md-1 col-sm-12 footer-col center-on-sm">
                         <h6 class="heading footer-heading">Newsletter</h6>
-                        <form autocomplete="on" id="sign-up-form" name="sign-up-form">
+                        <form action="https://haystackhq.us17.list-manage.com/subscribe/post?u=e1d72687f4318d88bda6ea018&amp;id=2e9590d9d3" method="post"  id="sign-up-form" name="sign-up-form">
                             <div class="form-group">
                                 <div class="input-group">
-                                    <input autocomplete="email" class="input form-control" data-validation="email" name="email" placeholder="Email">
+                                    <input id="mce-EMAIL" autocomplete="email" class="input form-control" data-validation="email" name="EMAIL" placeholder="Email">
                                     <div class="input-group-append">
                                         <button class="btn ">Subscribe <span class="fa fa-send"></span>
                                         </button>
+                                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_e1d72687f4318d88bda6ea018_2e9590d9d3" tabindex="-1" value=""></div>
                                     </div>
                                 </div>
                             </div>
                         </form>
-                       -->
                         <div>
                             <a href="https://www.facebook.com/haystackhq" target="_blank" class="btn bg-white btn-circle shadow-md">
                                 <span class="fa fa-facebook"></span>
