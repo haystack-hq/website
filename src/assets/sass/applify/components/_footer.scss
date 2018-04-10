@@ -26,7 +26,7 @@
 		}
 	}
     & .footer-col{
-        @media (max-width:739px){
+        @media (max-width:767px){
             margin-bottom: 4rem;
 			&:last-of-type {
 				margin-bottom: 1rem;
@@ -47,7 +47,7 @@
                 justify-content: flex-end;
                 align-items: center;
                 height: 40px;
-                @media (max-width:739px){
+                @media (max-width:767px){
                     justify-content: center;
                 }
                 & li{
@@ -66,7 +66,7 @@
 	// Smaller Screens
 	@include breakpoint(sm) {
 		& .heading {
-			margin-bottom: 1.25rem;
+			margin-bottom: 1.35rem;
 		}
 	}
 	// Medium Screens
@@ -99,7 +99,7 @@
                     font-weight: 600;
                     font-size: .95rem;
 					@media (max-width:767px){
-						font-size: 1.1rem;
+						font-size: 1.25rem;
 					}
                 }
             }
@@ -121,7 +121,45 @@
 	@media (max-width:767px){
 
 		h6 {
-			font-size: 1.25rem;
+			font-size: 1.35rem;
+		}
+	}
+
+	#sign-up-form {
+		.form-group {
+			.input-group {
+				.form-control {
+					border: none;
+				}
+				.input-group-append{
+					.btn {
+						border-top-right-radius: 50em;
+						border-bottom-right-radius: 50em;
+						&:hover {
+							color: inherit;
+						}
+					}
+				}
+			}
+		}
+		.help-block {
+			width: 100%;
+			border-radius: 4px;
+			background-color: #fff;
+			margin: 10px auto 1rem !important;
+			text-align: center;
+			font-weight: 600;
+			font-size: 11px;
+			padding: 5px 10px;
+			&.form-error {
+				color: $danger;
+			}
+			&.form-success {
+				color: $success;
+			}
+			@media (max-width:767px){
+				width: 50%;
+			}
 		}
 	}
 }

@@ -519,7 +519,12 @@ $( document ).ready(function() {
                 modules: "sanitize",
                 scrollToTopOnError: false,
                 onSuccess: function($form) {
+                    formMsgClear($form);
                     submit_form($form, "mailer/submit-contact-form.php");
+                    return false;
+                },
+                onError: function($form){
+                    formMsgClear($form);
                     return false;
                 }
             });
@@ -531,7 +536,12 @@ $( document ).ready(function() {
                 modules: "sanitize",
                 scrollToTopOnError: false,
                 onSuccess: function($form) {
+                    formMsgClear($form);
                     submit_form($form, $form.attr('action'));
+                    return false;
+                },
+                onError: function($form){
+                    formMsgClear($form);
                     return false;
                 }
             });
@@ -543,11 +553,23 @@ $( document ).ready(function() {
                 modules: "sanitize",
                 scrollToTopOnError: false,
                 onSuccess: function($form) {
-                    submit_form($form, "mailer/submit-subscribe-form.php");
+                    formMsgClear($form);
+                    submit_form($form, $form.attr('action'));
+                    return false;
+                },
+                onError: function($form){
+                    formMsgClear($form);
                     return false;
                 }
             });
         }
+
+        function formMsgClear($form){
+            if($form.find('.help-block')){
+                $form.find('.help-block').remove();
+            }
+        }
+
         function submit_form(form, script) {
             var the_form = form;
             the_form.find("button").text("Sending");
@@ -568,13 +590,16 @@ $( document ).ready(function() {
                     contentType: 'application/json; charset=utf-8',
                     success: function(data) {
                         if (data.result !== "success"){
+
                             the_form.find("button").text("Submit");
+                            formMsgClear(the_form);
                             var error = $('<span class="help-block form-error" style="margin-bottom: 0;margin-top: 1rem"/>').html(data.msg);
                             the_form.append(error);
                             resetForm(the_form);
                         } else {
                             the_form.trigger("reset");
                             the_form.find("button").text("Sent");
+                            formMsgClear(the_form);
                             var msg = $('<span class="help-block form-success" style="margin-bottom: 0;margin-top: 1rem"/>').text('Thanks for signing up. We\'ll be in touch!');
                             if ($("#contact-form").length > 0) {
                                 msg = $('<span class="help-block form-success" style="margin-bottom: 1rem;margin-top: 1rem"/>').text('Thanks for signing up. We\'ll be in touch!');
@@ -589,6 +614,42 @@ $( document ).ready(function() {
                                 'event_category': 'Submit',
                                 'event_label': 'Early Access Campaign'
                             });
+                        }
+                    },
+                    error: function() {
+                        console.log("Error: Ajax Fatal Error");
+                    }
+                });
+            }
+
+            if(the_form.is("form#sign-up-form")){
+                $.ajax({
+                    url: script,
+                    crossDomain: true,
+                    data: the_form.serialize(),
+                    method: "GET",
+                    cache: false,
+                    dataType: 'json',
+                    contentType: 'application/json; charset=utf-8',
+                    success: function(data) {
+                        if (data.result !== "success"){
+                            the_form.find("button").text("Submit");
+                            formMsgClear(the_form);
+                            var error = $('<span class="help-block form-error" style="margin-bottom: 0;margin-top: 1rem"/>').html(data.msg);
+                            the_form.append(error);
+                            resetForm(the_form);
+                        } else {
+                            the_form.trigger("reset");
+                            the_form.find("button").text("Sent");
+                            formMsgClear(the_form);
+                            var msg = $('<span class="help-block form-success" style="margin-bottom: 0;margin-top: 1rem"/>').text('Thanks for signing up!');
+                            if ($("#contact-form").length > 0) {
+                                msg = $('<span class="help-block form-success" style="margin-bottom: 1rem;margin-top: 1rem"/>').text('Thanks for signing up!');
+                                msg.insertBefore(the_form.find("button"));
+                            } else {
+                                the_form.append(msg);
+                            }
+                            resetForm(the_form);
                         }
                     },
                     error: function() {
@@ -623,9 +684,11 @@ $( document ).ready(function() {
                             if(data === "OK") {
                                 the_form.trigger("reset");
                                 the_form.find("button").text("Sent");
+                                formMsgClear(the_form);
                                 var success = 'Thanks for contacting us. We\'ll get back to you as soon as possible!';
                                 var msg = $('<span class="help-block form-success" style="margin-bottom: 0;margin-top: 1rem"/>').text(success);
                                 if ($("#contact-form").length > 0) {
+                                    formMsgClear(the_form);
                                     msg = $('<span class="help-block form-success" style="margin-bottom: 1rem;margin-top: 1rem"/>').text(success);
                                     msg.insertBefore(the_form.find("button"));
                                 } else {
@@ -663,8 +726,6 @@ $( document ).ready(function() {
 
             // Set action on the form
             $(form).attr('action', action);
-
-            console.log('end of prepareAjaxAction');
         }
 
          function resetForm(form) {
@@ -711,8 +772,6 @@ $( document ).ready(function() {
         $('form[action*="list-manage.com"]').each(function() {
 
             var form = $(this);
-            console.log('IN THIS');
-            console.log(form);
             // Override browser validation and allow us to use our own
             form.attr('novalidate', 'novalidate');
 

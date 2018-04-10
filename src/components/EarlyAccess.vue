@@ -50,7 +50,7 @@ import LayoutBase from '@/components/layouts/Base'
 import ContactInfo from '@/components/includes/ContactInfo'
 
 export default {
-  name: 'Early Access',
+  name: 'EarlyAccess',
   components: {LayoutBase, ContactInfo},
   data () {
     return {
