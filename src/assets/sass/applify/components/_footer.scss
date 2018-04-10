@@ -128,10 +128,16 @@
 	#sign-up-form {
 		.form-group {
 			.input-group {
+				.form-control {
+					border: none;
+				}
 				.input-group-append{
 					.btn {
 						border-top-right-radius: 50em;
 						border-bottom-right-radius: 50em;
+						&:hover {
+							color: inherit;
+						}
 					}
 				}
 			}

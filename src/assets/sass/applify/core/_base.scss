@@ -97,6 +97,7 @@ body[data-fade_in="on-load"],
 }
 
 .haystack-extend-primary-text {  color: $blue;  }
+.haystack-extend-dark-text {  color: darken($blue, 7.5%);  }
 .haystack-extend-dark-gray-bg {
     background-color: $gray-dark;
     color: $white;
@@ -287,8 +288,7 @@ body[data-fade_in="on-load"],
 }
 
 .btn.btn-circle .fa {
-    @extend .haystack-extend-primary-text;
-
+    @extend .haystack-extend-dark-text;
 }
 
 .pt-0, .section.pt-0{
