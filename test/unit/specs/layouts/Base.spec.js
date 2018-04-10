@@ -21,4 +21,6 @@ describe('Base', () => {
     // button
     Vue.see(wrapper, '<a href="/early-access" class="btn early-access btn-sm pull-right">Get Early Access</a>')
   })
+
+  // footer tests
 })

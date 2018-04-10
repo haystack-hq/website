@@ -47,4 +47,6 @@ describe('EarlyAccess', () => {
 
     Vue.see(wrapper, '<button type="submit" class="btn btn-block">Submit</button>')
   })
+
+  // test the form submitting with mocks
 })
