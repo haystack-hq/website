@@ -82,7 +82,7 @@ export default {
 }
 </script>
 <style>
-    .navbar.transparent {
+    nav.navbar.transparent {
         background-color: #0277BD !important;
     }
 </style>
