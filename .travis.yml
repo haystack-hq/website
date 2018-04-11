@@ -12,7 +12,6 @@ deploy:
   skip_cleanup: true
   acl: public_read
   local_dir: dist
-  cache_control: "max-age=31536000"
 addons:
   artifacts:
     debug: true
