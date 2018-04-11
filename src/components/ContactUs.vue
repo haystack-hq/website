@@ -66,9 +66,7 @@ export default {
   name: 'ContactUs',
   components: {LayoutBase, ContactInfo},
   data () {
-    return {
-
-    }
+    return {}
   },
   head: {
     title: {
@@ -94,8 +92,3 @@ export default {
   }
 }
 </script>
-<style>
-    nav.navbar.transparent {
-        background-color: #0277BD !important;
-    }
-</style>

@@ -1,7 +1,7 @@
 <template>
-    <div>
+    <div class="layout-wrapper" :class="{ 'ui-transparent-nav': transparentNav }">
         <!-- Navbar Fixed + Default -->
-        <nav class="navbar navbar-fixed-top navbar-dark ">
+        <nav class="navbar navbar-fixed-top navbar-dark">
             <div class="container">
                 <!-- Navbar Logo -->
                 <a class="ui-variable-logo navbar-brand" href="/" title="Haystack - Fast simple development environments">
@@ -130,10 +130,9 @@
 <script>
 export default {
   name: 'Base',
+  props: ['transparentNav'],
   data () {
-    return {
-
-    }
+    return {}
   },
   head: {
     script: [

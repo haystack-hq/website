@@ -53,9 +53,7 @@ export default {
   name: 'EarlyAccess',
   components: {LayoutBase, ContactInfo},
   data () {
-    return {
-
-    }
+    return {}
   },
   head: {
     title: {
@@ -81,8 +79,3 @@ export default {
   }
 }
 </script>
-<style>
-    nav.navbar.transparent {
-        background-color: #0277BD !important;
-    }
-</style>

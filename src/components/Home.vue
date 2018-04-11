@@ -1,5 +1,5 @@
 <template>
-    <layout-base>
+    <layout-base transparent-nav="transparentNav">
         <!-- Main Wrapper -->
         <div class="main" slot="content" role="main">
 
@@ -554,7 +554,9 @@ export default {
   name: 'Home',
   components: {LayoutBase},
   data () {
-    return {}
+    return {
+      transparentNav: true
+    }
   },
   head: {
     title: {
