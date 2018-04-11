@@ -1,3 +1,6 @@
+# Haystack Website [![Build Status](https://travis-ci.org/haystack-hq/website.svg?branch=master)](https://travis-ci.org/haystack-hq/website)
+
+Live website at [https://haystackhq.com/](https://haystackhq.com/)
 
 ## Build Setup
 
